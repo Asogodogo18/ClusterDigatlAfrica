@@ -1,0 +1,543 @@
+{
+ "speaker": [
+  {
+   "name": "CHAMPION Chap",
+   "poste": "DEV",
+   "img": "http://clusterdigitalafrica.com/ke-admin/upload/images/speaker/ImageSpeaker-72.jpeg",
+   "email": "dev@famibmali.com",
+   "tel": "12345",
+   "country": "Mali"
+  },
+  {
+   "name": "Boubacar SANGHO",
+   "poste": "CEO Global Business Technologies, Ambassadeur du Cluster Digital Africa",
+   "img": "http://clusterdigitalafrica.com/ke-admin/upload/images/speaker/ImageSpeaker-71.jpeg",
+   "email": "sangho@gbtmali.com",
+   "tel": "12345",
+   "country": "Mali"
+  },
+  {
+   "name": "DUX PEYROUX",
+   "poste": "Général de brigade, représentant de la force Barkhane",
+   "img": "http://clusterdigitalafrica.com/ke-admin/upload/images/speaker/ImageSpeaker-70.jpeg",
+   "email": "rbm.conscom@gmail.com",
+   "tel": "12345",
+   "country": "Mali"
+  },
+  {
+   "name": "Mossadeck Bally",
+   "poste": "PDG Groupe Azalaï Hôtels, président d'honneur du Cluster Digital Africa",
+   "img": "http://clusterdigitalafrica.com/ke-admin/upload/images/speaker/ImageSpeaker-69.jpeg",
+   "email": "mossadeck.bally@azalaihotels.com",
+   "tel": "12345",
+   "country": "Mali"
+  },
+  {
+   "name": "Bakary DAO",
+   "poste": "Lieutenant colonel sous Directeur des opérations de secours et d'assistance à la Direction générale",
+   "img": "http://clusterdigitalafrica.com/ke-admin/upload/images/speaker/ImageSpeaker-68.jpeg",
+   "email": "dao.bakary999@gmail.com",
+   "tel": "12345",
+   "country": "Mali"
+  },
+  {
+   "name": "Abdoul Malick Diallo",
+   "poste": "Chef de division innovation solidaire, Orange Mali",
+   "img": "http://clusterdigitalafrica.com/ke-admin/upload/images/speaker/ImageSpeaker-67.png",
+   "email": "diallomalik@hotmail.com",
+   "tel": "12345",
+   "country": "Mali"
+  },
+  {
+   "name": "Mohamed Salia Touré",
+   "poste": "Ancien Ministre de la formation Professionnelle et de l’emploi Jeunes",
+   "img": "http://clusterdigitalafrica.com/ke-admin/upload/images/speaker/ImageSpeaker-66.png",
+   "email": "ms.toure@eliteinvestmali.com",
+   "tel": "12345",
+   "country": "Mali"
+  },
+  {
+   "name": "Mahamadou Cissé",
+   "poste": "CEO Start-Up FiKasso, Coordinateur Programme Mobilisation",
+   "img": "http://clusterdigitalafrica.com/ke-admin/upload/images/speaker/ImageSpeaker-65.png",
+   "email": "cissemahamadou1@gmail.com",
+   "tel": "12345",
+   "country": "Mali"
+  },
+  {
+   "name": "Amadou Diawara",
+   "poste": "President Cluster Digital Africa",
+   "img": "http://clusterdigitalafrica.com/ke-admin/upload/images/speaker/ImageSpeaker-64.png",
+   "email": "adiawara@famibmali.com",
+   "tel": "12345",
+   "country": "Mali"
+  },
+  {
+   "name": "Adama Sissoko",
+   "poste": "Professeur à Faculté d’Histoire-Géographie de l’Université des Sciences Sociales et de Gestion de B",
+   "img": "http://clusterdigitalafrica.com/ke-admin/upload/images/speaker/ImageSpeaker-63.png",
+   "email": "adamasissoko67@gmail.com",
+   "tel": "12345",
+   "country": "Mali"
+  },
+  {
+   "name": "Adama Berthé",
+   "poste": "Président Directeur Général de Nouvelle Technologie Africaine (NTA_TECH)",
+   "img": "http://clusterdigitalafrica.com/ke-admin/upload/images/speaker/ImageSpeaker-62.png",
+   "email": "adama.berthe@hotmail.com",
+   "tel": "12345",
+   "country": "Mali"
+  },
+  {
+   "name": "Damassa Bouaré",
+   "poste": "Directeur Général Hydraulique",
+   "img": "http://clusterdigitalafrica.com/ke-admin/upload/images/speaker/ImageSpeaker-61.png",
+   "email": "bouaredamassa@yahoo.fr",
+   "tel": "12345",
+   "country": "Mali"
+  },
+  {
+   "name": "Idriss Tinto",
+   "poste": "Co-fondateur & Directeur Exécutif OPenBurkina, Coordinateur CAFDO",
+   "img": "http://clusterdigitalafrica.com/ke-admin/upload/images/speaker/ImageSpeaker-60.png",
+   "email": "tinto.jean@openburkina.bf",
+   "tel": "12345",
+   "country": "Burkina Faso"
+  },
+  {
+   "name": "Mahamoudou Wadidie",
+   "poste": ": Directeur Général de l’ Agence de Développement Régional de Bamako (ADRBamako)",
+   "img": "http://clusterdigitalafrica.com/ke-admin/upload/images/speaker/ImageSpeaker-59.png",
+   "email": "mwadidie@yahoo.fr",
+   "tel": "12345",
+   "country": "Mali"
+  },
+  {
+   "name": "Marietou Sogodogo",
+   "poste": ": Geographe, Spécialiste Cartographie Numérique et SIG, OPenStreetMap Mali",
+   "img": "http://clusterdigitalafrica.com/ke-admin/upload/images/speaker/ImageSpeaker-58.png",
+   "email": "marietousogodogo152@gmail.com",
+   "tel": "12345",
+   "country": "Mali"
+  },
+  {
+   "name": "Lamine N’Diaye",
+   "poste": ": Informaticien, Spécialiste Cartographie Numérique & SIG, OPenStreetMap Senegal",
+   "img": "http://clusterdigitalafrica.com/ke-admin/upload/images/speaker/ImageSpeaker-57.png",
+   "email": "lamineyasey@gmail.com",
+   "tel": "12345",
+   "country": "Sénégal"
+  },
+  {
+   "name": "Hamed Salif Camara",
+   "poste": "Directeur Général du Complex Numérique de Bamako",
+   "img": "http://clusterdigitalafrica.com/ke-admin/upload/images/speaker/ImageSpeaker-56.png",
+   "email": "hcamara@agetic.gouv.ml",
+   "tel": "12345",
+   "country": "Mali"
+  },
+  {
+   "name": "Amadou Ndong",
+   "poste": "Data Manager au Center for Humanitarian Data de UNOCHA (Dkar), OPenStreetMap Sénégal",
+   "img": "http://clusterdigitalafrica.com/ke-admin/upload/images/speaker/ImageSpeaker-55.png",
+   "email": "ndongamadou@gmail.com",
+   "tel": "12345",
+   "country": "Sénégal"
+  },
+  {
+   "name": "Nathalie SIDIBE",
+   "poste": "CEO DataTIC Consulting, Presidente OpenStreetMap Mali",
+   "img": "http://clusterdigitalafrica.com/ke-admin/upload/images/speaker/ImageSpeaker-54.png",
+   "email": "nathalie.sidibe@hotosm.org",
+   "tel": "12345",
+   "country": "Mali"
+  },
+  {
+   "name": "Mohamed Vetah",
+   "poste": "Spécialiste en Télédétection Fondateur OPenStreetMap Mauritanie",
+   "img": "http://clusterdigitalafrica.com/ke-admin/upload/images/speaker/ImageSpeaker-53.png",
+   "email": "mohamed vetah20@gmail.com",
+   "tel": "12345",
+   "country": "Mauritani"
+  },
+  {
+   "name": "Antoine Chèvre",
+   "poste": "Directeur de Transport, Agence Française de Développement (AFD )",
+   "img": "http://clusterdigitalafrica.com/ke-admin/upload/images/speaker/ImageSpeaker-52.png",
+   "email": "chevrea@afd.fr",
+   "tel": "223",
+   "country": "Mali"
+  },
+  {
+   "name": "Mark Herringer",
+   "poste": "Fondateur & CEO Healthsites.io",
+   "img": "http://clusterdigitalafrica.com/ke-admin/upload/images/speaker/ImageSpeaker-51.png",
+   "email": "mark@healthsites.io",
+   "tel": "223",
+   "country": "Mali"
+  },
+  {
+   "name": "Dr. Ousmane LY",
+   "poste": "Ancien Directeur Général de lAgence Nationale de TeleSanté et d'informatique Médicale",
+   "img": "http://clusterdigitalafrica.com/ke-admin/upload/images/speaker/ImageSpeaker-50.png",
+   "email": "oussouly@gmail.com",
+   "tel": "223",
+   "country": "Mali"
+  },
+  {
+   "name": "Dr Souleymane SAWADOGO",
+   "poste": "Consultant, MD, DESS Informatique de la Santé",
+   "img": "http://clusterdigitalafrica.com/ke-admin/upload/images/speaker/ImageSpeaker-49.png",
+   "email": "nouchour@gmail.com",
+   "tel": "223",
+   "country": "Mali"
+  },
+  {
+   "name": "Dr Abdoulaye KONATE",
+   "poste": "Consultant, Spécialiste en Informatique de la Santé",
+   "img": "http://clusterdigitalafrica.com/ke-admin/upload/images/speaker/ImageSpeaker-48.png",
+   "email": "abdoulayelkonate@gmail.com",
+   "tel": "223",
+   "country": "Mali"
+  },
+  {
+   "name": "Dr Hammadoun DIA",
+   "poste": "specialiste en informatique de la sante et expert en santé numérique, (PNUD)",
+   "img": "http://clusterdigitalafrica.com/ke-admin/upload/images/speaker/ImageSpeaker-47.png",
+   "email": "hamadia98@gmail.com",
+   "tel": "223",
+   "country": "Mali"
+  },
+  {
+   "name": "Labaly Touré",
+   "poste": "Geomaticien, Expert SIG, Droniste, Web Mapping, Cartographe et CEO de GEOMATICA/ Enseignant Chercheu",
+   "img": "http://clusterdigitalafrica.com/ke-admin/upload/images/speaker/ImageSpeaker-46.png",
+   "email": "Labaly.toure@geomatica-services.com",
+   "tel": "223",
+   "country": "Mali"
+  },
+  {
+   "name": "Colonel Cheickiné Dieffaga",
+   "poste": "Secrétaire Permanent de la Réforme Domaniale et foncière",
+   "img": "http://clusterdigitalafrica.com/ke-admin/upload/images/speaker/ImageSpeaker-45.png",
+   "email": "dieffaga@yahoo.fr",
+   "tel": "223",
+   "country": "Mali"
+  },
+  {
+   "name": "Franck SOB WILLY",
+   "poste": "CEO Sogefi Cameroun, OpenStreetMap Cameroun",
+   "img": "http://clusterdigitalafrica.com/ke-admin/upload/images/speaker/ImageSpeaker-44.png",
+   "email": "willyfrancksob@gmail.com",
+   "tel": "223",
+   "country": "Mali"
+  },
+  {
+   "name": "Enseignant Oumar",
+   "poste": "Enseignant",
+   "img": "http://clusterdigitalafrica.com/ke-admin/upload/images/speaker/ImageSpeaker-43.jpg",
+   "email": "oumardiakite288@gmail.com",
+   "tel": "+22375322850",
+   "country": "Mali"
+  },
+  {
+   "name": "Ramatoulaye Diallo",
+   "poste": "Ramatoulaye Diallo dite Blackish Entrepreneur ,Activiste membre de ACAN ( ACTION CRÉATIVE ART NETWO",
+   "img": "http://clusterdigitalafrica.com/ke-admin/upload/images/speaker/ImageSpeaker-42.jpeg",
+   "email": "bblackentertainement19@gmail.com",
+   "tel": "+221778435612",
+   "country": "Dakar Sénégal"
+  },
+  {
+   "name": "Ahoua Idrissa LY",
+   "poste": "Ahoua Idrissa LY",
+   "img": "http://clusterdigitalafrica.com/ke-admin/upload/images/speaker/ImageSpeaker-41.jpeg",
+   "email": "dmmanager@famibmali.com",
+   "tel": "+212 766-630891",
+   "country": "Mali"
+  },
+  {
+   "name": "Tako CAMARA",
+   "poste": "Tako CAMARA Folo Digital Consulting",
+   "img": "http://clusterdigitalafrica.com/ke-admin/upload/images/speaker/ImageSpeaker-40.png",
+   "email": "tcamara@folodigitalconsulting.com",
+   "tel": "3456328",
+   "country": "Mali"
+  },
+  {
+   "name": "Alima DIAWARA",
+   "poste": "Alima DIAWARA",
+   "img": "http://clusterdigitalafrica.com/ke-admin/upload/images/speaker/ImageSpeaker-38.jpeg",
+   "email": "alimadiawara@gmail.com",
+   "tel": "348920991",
+   "country": "Mali"
+  },
+  {
+   "name": "Balkissa DE SIDDO",
+   "poste": "Balkissa DE SIDDO",
+   "img": "http://clusterdigitalafrica.com/ke-admin/upload/images/speaker/ImageSpeaker-37.jpeg",
+   "email": "bakissadesiddo@gmail.com",
+   "tel": "89373627",
+   "country": "Mali"
+  },
+  {
+   "name": "Aicha TOURE",
+   "poste": "Aicha TOURE CEO Orange Finances Mobiles",
+   "img": "http://clusterdigitalafrica.com/ke-admin/upload/images/speaker/ImageSpeaker-36.jpeg",
+   "email": "aichatoure@orange.com",
+   "tel": "7398473",
+   "country": "Mali"
+  },
+  {
+   "name": "El Hadj Sekou ASCOFARE",
+   "poste": "El Hadj Sekou ASCOFARE",
+   "img": "http://clusterdigitalafrica.com/ke-admin/upload/images/speaker/ImageSpeaker-35.jpeg",
+   "email": "ascofare@amrtp.com",
+   "tel": "343029<",
+   "country": "Mali"
+  },
+  {
+   "name": "Jean Jacques GOSSAN",
+   "poste": "Jean Jacques GOSSAN",
+   "img": "http://clusterdigitalafrica.com/ke-admin/upload/images/speaker/ImageSpeaker-34.jpeg",
+   "email": "gossan@mali.com",
+   "tel": "739028749",
+   "country": "Mali"
+  },
+  {
+   "name": "Abdelaziz BEDDINI",
+   "poste": "Abdelaziz BEDDINI directeur moov africa malitel",
+   "img": "http://clusterdigitalafrica.com/ke-admin/upload/images/speaker/ImageSpeaker-33.jpeg",
+   "email": "beddini@malitel.com",
+   "tel": "2789302",
+   "country": "Mali"
+  },
+  {
+   "name": "Thierry Thierry",
+   "poste": "Thierry Thierry",
+   "img": "http://clusterdigitalafrica.com/ke-admin/upload/images/speaker/ImageSpeaker-32.jpeg",
+   "email": "diosonama@airtel.com",
+   "tel": "62578902",
+   "country": "Congo"
+  },
+  {
+   "name": "Brelotte BA",
+   "poste": "Brelotte BA",
+   "img": "http://clusterdigitalafrica.com/ke-admin/upload/images/speaker/ImageSpeaker-31.jpeg",
+   "email": "brelotteba@orange.com",
+   "tel": "123495793",
+   "country": "Mali"
+  },
+  {
+   "name": "Cheick Sidi Mohamed NIMAGA",
+   "poste": "Cheick Sidi Mohamed NIMAGA",
+   "img": "http://clusterdigitalafrica.com/ke-admin/upload/images/speaker/ImageSpeaker-30.jpeg",
+   "email": "nimaga@amrtp.com",
+   "tel": "2398651",
+   "country": "Mali"
+  },
+  {
+   "name": "THYS KAZAD",
+   "poste": "Vice président du cluster digital Africa",
+   "img": "http://clusterdigitalafrica.com/ke-admin/upload/images/speaker/ImageSpeaker-29.jpeg",
+   "email": "THYSKAZAD@gmail.com",
+   "tel": "12537890",
+   "country": "Congo"
+  },
+  {
+   "name": "Augustin Maliba",
+   "poste": "Augustin Maliba Ministre des NTIC",
+   "img": "http://clusterdigitalafrica.com/ke-admin/upload/images/speaker/ImageSpeaker-28.jpeg",
+   "email": "malibaaugustin@gmail.com",
+   "tel": "76439201",
+   "country": "Congo"
+  },
+  {
+   "name": "Kolongela Eberande",
+   "poste": "Ministre du numérique Congo RDC",
+   "img": "http://clusterdigitalafrica.com/ke-admin/upload/images/speaker/ImageSpeaker-27.jpeg",
+   "email": "kolongelaeberande@gmail.com",
+   "tel": "76459093",
+   "country": "Congo"
+  },
+  {
+   "name": "Hamadoun TOURE",
+   "poste": "Docteur Hamadou TOURE",
+   "img": "http://clusterdigitalafrica.com/ke-admin/upload/images/speaker/ImageSpeaker-26.jpeg",
+   "email": "com@famibmali.com",
+   "tel": "76650310",
+   "country": "Mali"
+  },
+  {
+   "name": "Mamadou DIAKITE",
+   "poste": "Mamadou DIAKITE est le directeur Executif de Baobab Intelligence &. Development",
+   "img": "http://clusterdigitalafrica.com/ke-admin/upload/images/speaker/ImageSpeaker-25.jpeg",
+   "email": "mdiakite@baobabinteldev.com",
+   "tel": "77420440",
+   "country": "Mali"
+  },
+  {
+   "name": "Seydou COULIBALY",
+   "poste": "Seydou Coulibaly est actuellement le directeur de la banque commerciale chez Ecobank",
+   "img": "http://clusterdigitalafrica.com/ke-admin/upload/images/speaker/ImageSpeaker-24.jpeg",
+   "email": "secoulibaly@ecobank.com",
+   "tel": "77420440",
+   "country": "Mali"
+  },
+  {
+   "name": "Nana DIABY",
+   "poste": "CEO Phiphi Plus - Communication, MÃ©dia & Coach en Management de Soi Productrice et PrÃ©sentatr",
+   "img": "http://clusterdigitalafrica.com/ke-admin/upload/images/speaker/ImageSpeaker-23.jpeg",
+   "email": "info@kinguievent.com",
+   "tel": "0022377420440",
+   "country": "Mali"
+  },
+  {
+   "name": "Nabil JEDLANE",
+   "poste": "Professeur universitaire dâ€™Ã©conomie et de Finance internationale et Chef de dÃ©partement Â« Mana",
+   "img": "http://clusterdigitalafrica.com/ke-admin/upload/images/speaker/ImageSpeaker-22.jpeg",
+   "email": "nabil.jedlane@gmail.com",
+   "tel": "0022377420440",
+   "country": "Maroc"
+  },
+  {
+   "name": "Aram BELHADJ",
+   "poste": "Docteur de l'universitÃ© d'OrlÃ©ans *Actuellement, enseignant chercheur Ã l'UniversitÃ© de Carthage",
+   "img": "http://clusterdigitalafrica.com/ke-admin/upload/images/speaker/ImageSpeaker-21.jpeg",
+   "email": "aram.belhadj@gmail.com",
+   "tel": "0022377420440",
+   "country": "Tunisie"
+  },
+  {
+   "name": "Yassine Bouhara",
+   "poste": "Yassine Bouhara is Group Chairman of Tell Il est : - 1er vice-prÃ©sident en charge des IDE de la CAC",
+   "img": "http://clusterdigitalafrica.com/ke-admin/upload/images/speaker/ImageSpeaker-20.jpeg",
+   "email": "yassine.bouhara@tell.group",
+   "tel": "0022377420440",
+   "country": "France"
+  },
+  {
+   "name": "Kacem AITYALLA",
+   "poste": "[A propos de M. Kaciâ€“Kacem AIT YALLA] : - Il dÃ©bute sa carriÃ¨re en qualitÃ© de responsable Rech",
+   "img": "http://clusterdigitalafrica.com/ke-admin/upload/images/speaker/ImageSpeaker-19.jpeg",
+   "email": "k.aityalla@cacifrance.org",
+   "tel": "0022377420440",
+   "country": "AlgÃ©rie"
+  },
+  {
+   "name": "Binatou COULIBALY",
+   "poste": "Jeune femme activiste",
+   "img": "http://clusterdigitalafrica.com/ke-admin/upload/images/speaker/ImageSpeaker-18.jpeg",
+   "email": "assistantedg@famibmali.com",
+   "country": "MALI"
+  },
+  {
+   "name": "Aminata KONATE BOUNE",
+   "poste": "Aminata KONATE BOUNE, Chevalier de lâ€™ordre National du Mali, Cadre de lâ€™Ã‰ducation Nationale Fra",
+   "img": "http://clusterdigitalafrica.com/ke-admin/upload/images/speaker/ImageSpeaker26-11-2020_09:40:08-17.jpeg",
+   "email": "amin.konate@gmail.com",
+   "tel": "77420440",
+   "country": "MALI"
+  },
+  {
+   "name": "Oumou NOMOKO",
+   "poste": "Oumou NOMOKO, Malienne et Canadienne, Directrice gÃ©nÃ©rale du Cabinet de Consultants en DÃ©veloppem",
+   "img": "http://clusterdigitalafrica.com/ke-admin/upload/images/speaker/ImageSpeaker-16.jpeg",
+   "email": "c2dnomoko@gmail.com",
+   "country": "MALI"
+  },
+  {
+   "name": "Mouminatou KANTE",
+   "poste": "Mouminatou KANTE, diplÃ´mÃ©e en Translation-Business de lâ€™UniversitÃ© Gamal Abdel Nasser de Conakr",
+   "img": "http://clusterdigitalafrica.com/ke-admin/upload/images/speaker/ImageSpeaker-15.jpeg",
+   "email": "mkante@axiomegc.com",
+   "country": "CANADA"
+  },
+  {
+   "name": "CHARLOTTE LIBOG",
+   "poste": "Charlotte LIBOG, DiplÃ´mÃ©e dâ€™un troisiÃ¨me cycle en E-business, Entrepreneur et Militante engagÃ©",
+   "img": "http://clusterdigitalafrica.com/ke-admin/upload/images/speaker/ImageSpeaker-14.jpeg",
+   "email": "libog78@gmail.com",
+   "country": "Afrique Subsaharienne"
+  },
+  {
+   "name": "Seynabou POUYE",
+   "poste": "Seynabou POUYE Titulaire dâ€™un master en gestion des projets et dâ€™une licence en commerce interna",
+   "img": "http://clusterdigitalafrica.com/ke-admin/upload/images/speaker/ImageSpeaker-13.jpeg",
+   "email": "seynabou.pouye@faadev.org",
+   "country": "SENEGAL"
+  },
+  {
+   "name": "LYNDA HAZOUME KEBITI",
+   "poste": "Lynda HAZOUME KETIBI est une professionnelle dans le domaine de la technologie, avec une expÃ©rience",
+   "img": "http://clusterdigitalafrica.com/ke-admin/upload/images/speaker/ImageSpeaker-12.jpeg",
+   "email": "lynda.hazoume@makedafoundation.org",
+   "country": "USA"
+  },
+  {
+   "name": "VALERIE BEILVERT",
+   "poste": "Directrice GÃ©nÃ©rale RMO Job Center Mali",
+   "img": "http://clusterdigitalafrica.com/ke-admin/upload/images/speaker/ImageSpeaker-11.jpeg",
+   "email": "valerie@gmail.com",
+   "country": "France"
+  },
+  {
+   "name": "KARIM RAHHAOUI",
+   "poste": "M. Karim RAHHAOUI, consul honoraire du Mali en Haute Garonne (Toulouse). Ã‚gÃ© de 49 ans, M. RAHHAO",
+   "img": "http://clusterdigitalafrica.com/ke-admin/upload/images/speaker/ImageSpeaker-10.jpeg",
+   "email": "kr@famibmali.com",
+   "country": "France"
+  },
+  {
+   "name": "Nicolas NORMAND",
+   "poste": "M. Nicolas NORMAND Ancien ambassadeur de la France au Mali, au Congo Brazzaville et au SÃ©nÃ©gal. I",
+   "img": "http://clusterdigitalafrica.com/ke-admin/upload/images/speaker/ImageSpeaker-9.jpeg",
+   "email": "nicolasnormand@gmail.com",
+   "country": "France"
+  },
+  {
+   "name": "Moussa BAGAYOKO",
+   "poste": "M. Moussa BAGAYOKO, Directeur gÃ©nÃ©ral de YÃ©lÃ© Consulting & Spark Consulting AffiliÃ© au gro",
+   "img": "http://clusterdigitalafrica.com/ke-admin/upload/images/speaker/ImageSpeaker-8.jpeg",
+   "email": "moussabagayoko@gmail.com",
+   "country": "Mali"
+  },
+  {
+   "name": "Hamane ARBY",
+   "poste": "M. Hamane ARBY Fondateur / AssociÃ© - Directeur non exÃ©cutif chez ETDS (Energie Technologie Distrib",
+   "img": "http://clusterdigitalafrica.com/ke-admin/upload/images/speaker/ImageSpeaker-7.jpeg",
+   "email": "hamanearby@gmail.com",
+   "country": "Mali"
+  },
+  {
+   "name": "Clement BOLLE BRUNO",
+   "poste": "M. Bruno ClÃ©ment BOLLEE, officier gÃ©nÃ©ral franÃ§ais de corps dâ€™armÃ©e, et consultant senior int",
+   "img": "http://clusterdigitalafrica.com/ke-admin/upload/images/speaker/ImageSpeaker-6.jpeg",
+   "email": "brunoclement@gmail.com",
+   "country": "France"
+  },
+  {
+   "name": "Mossadeck BALLY",
+   "poste": "M. Mossadeck BALLY Mossadeck Bally est un entrepreneur malien CEO du groupe hÃ´telier AzalaÃ¯ Ã©lev",
+   "img": "http://clusterdigitalafrica.com/ke-admin/upload/images/speaker/ImageSpeaker-5.jpeg",
+   "email": "mossadeckbally@gmail.com",
+   "country": "Mali"
+  },
+  {
+   "name": "Caroline ROUSSY",
+   "poste": "Mme Caroline Roussy, PHD GÃ©o politicologue, enseignante chercheuse Afrique Ã lâ€™IRIS, elle est ch",
+   "img": "http://clusterdigitalafrica.com/ke-admin/upload/images/speaker/ImageSpeaker-2.jpeg",
+   "email": "carolineroussy@gmaail.com",
+   "tel": "76650310",
+   "country": "France"
+  },
+  {
+   "name": "DIAWARA Amadou",
+   "poste": "CEO dNous vous prÃ©sentons M. Amadou DIAWARA CEO du Groupe Famib et president de l'UniversitÃ© virtu",
+   "img": "http://clusterdigitalafrica.com/ke-admin/upload/images/speaker/ImageSpeaker29-03-2021_07:09:06-1.jpeg",
+   "email": "adiawara@uvmali.com",
+   "tel": "76650310",
+   "country": "Mali"
+  }
+ ]
+}
