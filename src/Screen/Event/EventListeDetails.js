@@ -40,7 +40,7 @@ const EventListeDetail = ({ navigation, route }) => {
           left: 5,
           zIndex: 5,
         }}
-        onPress={() => navigation.goBack()}
+        onPress={() => navigation.naviagte("Appstack")}
       >
         <Ionicons name="arrow-back-outline" size={30} color="white" />
       </TouchableOpacity>

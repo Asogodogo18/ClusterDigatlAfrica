@@ -21,6 +21,7 @@ const index = ({ navigation }) => {
   const CardMembre = ({ biography }) => {
     return (
       <TouchableOpacity
+        key={biography.id}
         onPress={() =>
           navigation.navigate("Biographie", {
             screen: "DetailBiographie",
@@ -134,8 +135,8 @@ const index = ({ navigation }) => {
           </View>
           <View
             style={{
-              flex: 8,
-              borderRadius: 5,
+              flex: 7,
+              borderRadius: 15,
               overflow: "hidden",
               margin: 10,
               alignSelf: "center",
@@ -180,7 +181,7 @@ const styles = StyleSheet.create({
     width: 350,
     height: 250,
     borderRadius: 25,
-    // flexDirection: "row",
+    flexDirection: "row",
     marginVertical: 10,
   },
   icon: {

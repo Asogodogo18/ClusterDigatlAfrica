@@ -71,8 +71,8 @@ const Categories = [
   },
   {
     id: "58694a0f-3da1-471f-bd96-145571e29d25",
-    title: "Actu",
-    image: require("../../../assets/icons/actu1.png"),
+    title: "Start-up",
+    image: require("../../../assets/icons/startup.png"),
   },
   {
     id: "58694a0f-3da1-471f-bd96-145571e29d75",

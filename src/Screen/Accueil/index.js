@@ -72,8 +72,13 @@ const Categories = [
   },
   {
     id: "58694a0f-3da1-471f-bd96-145571e29d25",
-    title: "Articles",
-    image: require("../../../assets/icons/actu1.png"),
+    title: "Start-up",
+    image: require("../../../assets/icons/startup.png"),
+  },
+  {
+    id: "56gh74lm-3da1-471f-bd96-145571e29d75",
+    title: "Partenaires",
+    image: require("../../../assets/icons/partners.png"),
   },
   {
     id: "58694a0f-3da1-471f-bd96-145571e29d75",

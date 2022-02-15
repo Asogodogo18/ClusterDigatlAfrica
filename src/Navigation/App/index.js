@@ -2,6 +2,8 @@ import React from "react";
 import { View, Text } from "react-native";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+
 import { enableScreens } from "react-native-screens";
 import { createSharedElementStackNavigator } from "react-navigation-shared-element";
 
@@ -32,11 +34,15 @@ import detailBiographie from "../../Screen/Biographie/detailBiographie";
 import { Crowdfunding, CrowdfundingDetails } from "../../Screen/crowdfunding";
 import DetailsPresentation from "../../Screen/Presentation/detailPresentation";
 import Inscriptions from "../../Screen/Inscription";
-
+//screens Uvm
+import Accueil from "../../Screen/Uvm/Accueil";
+import Bibliotheque from "../../Screen/Uvm/Bibliothéque";
+import Cours from "../../Screen/Uvm/Cours";
+import Profile from "../../Screen/Uvm/Profile";
 import { Easing } from "react-native-reanimated";
 
 enableScreens();
-const Stack = createNativeStackNavigator();
+const UVMStack = createBottomTabNavigator();
 
 const Drawer = createDrawerNavigator();
 const sharedStack = createSharedElementStackNavigator();
@@ -335,6 +341,18 @@ const CrowdfundingScreen = () => {
     </CrowdfundingShardedStack.Navigator>
   );
 };
+
+const UVMStack = () => {
+  return (
+    <UVMStack.Navigator>
+      <UVMStack.Screen name="Accueil" component={Accueil} />
+      <UVMStack.Screen name="Cours" component={Cours} />
+      <UVMStack.Screen name="Bibliothèque" component={Bibliotheque} />
+      <UVMStack.Screen name="Profile" component={Profile} />
+    </UVMStack.Navigator>
+  );
+};
+
 const Index = (props) => {
   return (
     <Drawer.Navigator drawerContent={(props) => <CustonDrawer {...props} />}>
