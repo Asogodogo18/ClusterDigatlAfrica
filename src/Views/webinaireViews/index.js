@@ -33,8 +33,8 @@ const EVENTS = [
   },
 ];
 
-const index = (props) => {
+const Index = (props) => {
   return <Webinaires data={EVENTS} {...props} />;
 };
 
-export default index;
+export default Index;

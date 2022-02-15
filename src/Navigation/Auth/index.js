@@ -8,7 +8,7 @@ import Inscription from "../../Screen/Login/Inscription/SignUpScreen";
 import PassOublier from "../../Screen/Login/PassOublier";
 import Ecran from "../../Screen/Login/EcranLogin/OnboardingScreen";
 
-const index = () => {
+const Index = () => {
   const Stack = createNativeStackNavigator();
   const [isAppFirstLaunched, setIsAppFirstLaunched] = React.useState(null);
 
@@ -38,4 +38,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;

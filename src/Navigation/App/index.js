@@ -45,7 +45,7 @@ const EventShardedStack = createSharedElementStackNavigator();
 const SpeakerShardedStack = createSharedElementStackNavigator();
 const BiographieShardedStack = createSharedElementStackNavigator();
 const CrowdfundingShardedStack = createSharedElementStackNavigator();
-const sharedScreens = () => {
+const SharedScreens = () => {
   return (
     <sharedStack.Navigator>
       <sharedStack.Screen
@@ -335,12 +335,12 @@ const CrowdfundingScreen = () => {
     </CrowdfundingShardedStack.Navigator>
   );
 };
-const index = (props) => {
+const Index = (props) => {
   return (
     <Drawer.Navigator drawerContent={(props) => <CustonDrawer {...props} />}>
       <Drawer.Screen
         name="Accueil"
-        component={sharedScreens}
+        component={SharedScreens}
         options={{ headerShown: false }}
       />
       <Drawer.Screen
@@ -403,4 +403,4 @@ const index = (props) => {
   );
 };
 
-export default index;
+export default Index;

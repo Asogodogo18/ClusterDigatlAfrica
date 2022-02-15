@@ -203,9 +203,10 @@ const Details = ({ navigation, route }) => {
           top: 0,
           left: 0,
           right: 0,
+          bottom: 0,
           zIndex: 5,
           // paddingTop: STATUS_BAR_HEIGHT,
-          height: 90,
+          height: 65,
 
           // transform: [{ translateX, translateY: navbarTranslate }],
         }}
@@ -214,7 +215,7 @@ const Details = ({ navigation, route }) => {
           const inputRange = [index - 1, index, index + 1];
           const opacity = activeIndexAnimation.interpolate({
             inputRange,
-            outputRange: [0.3, 1, 0.3],
+            outputRange: [0.2, 1, 0.2],
             extrapolate: "clamp",
           });
           return (
@@ -228,9 +229,7 @@ const Details = ({ navigation, route }) => {
                 navigation.navigate("Details", { item: item });
               }}
             >
-              <Animated.View
-                style={[{ opacity, justifyContent: "center", marginLeft: 0 }]}
-              >
+              <Animated.View style={[{ opacity, marginLeft: 0 }]}>
                 <LinearGradient
                   colors={["#34c747", "#00FFFF"]}
                   start={{ x: 0.0, y: 0.0 }}
@@ -247,7 +246,7 @@ const Details = ({ navigation, route }) => {
                     <Image style={styles.Avatar} source={item.image} />
                   </SharedElement>
                 </LinearGradient>
-                <View
+                {/* <View
                   style={{
                     height: 12,
                     width: 100,
@@ -256,7 +255,7 @@ const Details = ({ navigation, route }) => {
                   }}
                 >
                   <Text style={styles.title}>{item.title}</Text>
-                </View>
+                </View> */}
               </Animated.View>
             </TouchableOpacity>
           );
@@ -264,14 +263,13 @@ const Details = ({ navigation, route }) => {
       </Animated.ScrollView>
       <Animated.View
         style={{
-          flex: 10,
+          flex: 9,
           opacity: mountedAnimated,
           marginBottom: 0,
           transform: [{ translateY }],
-          paddingTop: NAVBAR_HEIGHT - 80,
+          // paddingTop: NAVBAR_HEIGHT - 80,
         }}
       >
-        {/* <Text style={{ textAlign: "center" }}>{item.title}</Text> */}
         {selectedItemIndex == 0 && <Membres navigation={navigation} />}
         {selectedItemIndex == 1 && (
           <Webinaire horizontal={false} navigation={navigation} />
@@ -293,11 +291,11 @@ const styles = StyleSheet.create({
     paddingTop: StatusBar.height,
   },
   item: {
-    height: 40,
-    width: 40,
-    // justifyContent: "center",
+    height: 50,
+    width: 50,
+    justifyContent: "center",
     alignItems: "center",
-    marginHorizontal: 10,
+    marginHorizontal: 5,
     zIndex: 5,
   },
   title: {

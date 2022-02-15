@@ -7,7 +7,7 @@ import Authstack from "../Auth";
 import Appstack from "../App";
 const RootStack = createNativeStackNavigator();
 
-const index = () => {
+const Index = () => {
   return (
     <RootStack.Navigator initialRouteName="Appstack">
       <RootStack.Screen
@@ -24,4 +24,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;

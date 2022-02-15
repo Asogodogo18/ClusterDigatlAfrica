@@ -13,6 +13,7 @@ import { SharedElement } from "react-navigation-shared-element";
 import * as Animatable from "react-native-animatable";
 import BIOGRAPHIEDATA from "../../Data/biography.json";
 import { List } from "react-native-paper";
+import CollapsibleList from "react-native-collapsible-list";
 
 const { biography } = BIOGRAPHIEDATA;
 
@@ -37,57 +38,54 @@ const index = ({ navigation }) => {
         >
           <View
             style={{
-              flex: 6,
+              flex: 5,
               justifyContent: "space-between",
               paddingHorizontal: 5,
               marginVertical: 15,
             }}
           >
+            <SharedElement id={`ìtem.${biography.thumb}.name`}>
+              <Text
+                style={{
+                  textTransform: "uppercase",
+                  fontSize: 18,
+                  color: "white",
+                  fontWeight: "700",
+                  letterSpacing: 1,
+                  textAlign: "center",
+                }}
+              >
+                {biography.name}
+              </Text>
+            </SharedElement>
+
+            <SharedElement id={`ìtem.${biography.thumb}.desc`}>
+              <Text
+                style={{
+                  fontSize: 10,
+                  color: "white",
+                  fontWeight: "400",
+                  letterSpacing: 0,
+                  textTransform: "uppercase",
+                  textAlign: "center",
+                  padding: 5,
+                }}
+              >
+                {biography.desc_summary.length > 30
+                  ? biography.desc_summary.substring(0, 150).padEnd(153, ".")
+                  : biography.desc_summary}
+              </Text>
+            </SharedElement>
+
             <View>
-              <SharedElement id={`ìtem.${biography.thumb}.name`}>
-                <Text
-                  style={{
-                    textTransform: "uppercase",
-                    fontSize: 18,
-                    color: "white",
-                    fontWeight: "700",
-                    letterSpacing: 1,
-                    textAlign: "center",
-                  }}
-                >
-                  {biography.name}
-                </Text>
-              </SharedElement>
-            </View>
-            <View>
-              <SharedElement id={`ìtem.${biography.thumb}.desc`}>
-                <Text
-                  style={{
-                    fontSize: 10,
-                    color: "white",
-                    fontWeight: "400",
-                    letterSpacing: 0,
-                    textTransform: "uppercase",
-                    textAlign: "center",
-                    padding: 10,
-                  }}
-                >
-                  {biography.desc_summary}
-                </Text>
-              </SharedElement>
-            </View>
-            <View>
-              <SharedElement id={`ìtem.${biography.tel}.description`}>
+              {/* <SharedElement
+                id={`ìtem.${biography.tel}.description`}
+                style={{
+                  marginBottom: 100,
+                }}
+              >
                 <List.AccordionGroup>
-                  <List.Accordion
-                    title="DESCRIPTION"
-                    id="1"
-                    style={
-                      {
-                        // fontSize: 11,
-                      }
-                    }
-                  >
+                  <List.Accordion title="DESCRIPTION" id="1">
                     <List.Item
                       description={biography.description}
                       descriptionNumberOfLines={10}
@@ -102,10 +100,12 @@ const index = ({ navigation }) => {
                       }}
                     />
 
-                    {/* {biography.description} */}
-                  </List.Accordion>
+                <Text>
+                  {biography.description.substring(0, 30).padEnd(33, ".")}
+                </Text>
+                </List.Accordion>
                 </List.AccordionGroup>
-              </SharedElement>
+              </SharedElement> */}
               <SharedElement id={`ìtem.${biography.tel}.date`}>
                 <Text
                   style={{
@@ -134,7 +134,7 @@ const index = ({ navigation }) => {
           </View>
           <View
             style={{
-              flex: 3,
+              flex: 8,
               borderRadius: 5,
               overflow: "hidden",
               margin: 10,
@@ -178,9 +178,9 @@ const styles = StyleSheet.create({
   card: {
     flex: 1,
     width: 350,
-    height: 360,
+    height: 250,
     borderRadius: 25,
-    flexDirection: "row",
+    // flexDirection: "row",
     marginVertical: 10,
   },
   icon: {

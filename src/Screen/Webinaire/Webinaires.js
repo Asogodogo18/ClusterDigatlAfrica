@@ -10,7 +10,7 @@ import {
 import Webinaire from "../../Views/webinaireViews";
 import Header from "../../Components/header";
 
-const Webinaires = ({ props, navigation }) => {
+const Webinaires = (props) => {
   return (
     <SafeAreaView style={styles.contain}>
       <View style={{ height: 150 }}>
@@ -22,7 +22,7 @@ const Webinaires = ({ props, navigation }) => {
       <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
         <TouchableOpacity
           onPress={() => {
-            navigation.navigate("Webinaire", {
+            props.navigation.navigate("Webinaire", {
               screen: "WebinaireDetails",
               params: { item },
             });

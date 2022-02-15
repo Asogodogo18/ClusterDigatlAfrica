@@ -16,7 +16,8 @@ const { width } = Dimensions.get("window");
 
 const Event = ({ item, horizontal, navigation }) => (
   <View style={{ padding: 10 }}>
-    <Pressable
+    <TouchableOpacity
+      activeOpacity={0.8}
       onPress={() => {
         navigation.navigate("Event", {
           screen: "EventDetails",
@@ -65,7 +66,7 @@ const Event = ({ item, horizontal, navigation }) => (
           </View>
         </View>
       </View>
-    </Pressable>
+    </TouchableOpacity>
   </View>
 );
 
@@ -121,8 +122,9 @@ const styles = StyleSheet.create({
   item: {
     height: 250,
     padding: 5,
-    marginVertical: 8,
-    marginHorizontal: 5,
+    marginVertical: 0,
+    marginHorizontal: 0,
+    alignSelf: "center",
     borderRadius: 20,
     backgroundColor: "white",
     elevation: 10,
@@ -132,7 +134,7 @@ const styles = StyleSheet.create({
       width: 10,
     },
     shadowOpacity: 0.5,
-    width: width - 30,
+    width: width - 20,
   },
   title: {
     fontSize: 15,

@@ -51,6 +51,7 @@ const detailBiographie = ({ navigation, route }) => {
       >
         <Ionicons name="arrow-back-outline" size={30} color="white" />
       </TouchableOpacity>
+
       <View
         style={{
           flex: 3,
@@ -108,12 +109,6 @@ const detailBiographie = ({ navigation, route }) => {
                 justifyContent: "space-between",
               }}
             >
-              <SharedElement id={`ìtem.${item.thumb}.date`}>
-                <Text style={{ marginLeft: 5 }}>
-                  <FontAwesome5 name="map-marked-alt" size={18} color="gray" />{" "}
-                  {item.date}
-                </Text>
-              </SharedElement>
               <SharedElement id={`ìtem.${item.thumb}.name`}>
                 <Text
                   style={{ color: "black", fontSize: 20, fontWeight: "bold" }}
@@ -122,25 +117,41 @@ const detailBiographie = ({ navigation, route }) => {
                   <FontAwesome name="check-circle" size={24} color="green" />
                 </Text>
               </SharedElement>
-              <SharedElement id={`item.${item.thumb}.description`}>
-                <Text style={{ color: "gray", fontWeight: "400" }}>
-                  {item.description}
+              <ScrollView
+                style={{ flexGrow: 1, marginTop: 10, marginBottom: -50 }}
+              >
+                <SharedElement id={`item.${item.thumb}.description`}>
+                  <Text style={{ color: "gray", fontWeight: "400" }}>
+                    {item.description}
+                  </Text>
+                </SharedElement>
+              </ScrollView>
+            </View>
+            <View style={{ flex: 1, padding: 10 }}>
+              <SharedElement
+                id={`ìtem.${item.thumb}.date`}
+                style={{ marginTop: 25 }}
+              >
+                <Text style={{ marginLeft: 5 }}>
+                  <FontAwesome5 name="map-marked-alt" size={18} color="gray" />{" "}
+                  {item.date}
                 </Text>
               </SharedElement>
-            </View>
-            <View style={{ flex: 1, padding: 20 }}>
-              <SharedElement id={`item.${item.thumb}.tel`}>
+              <SharedElement
+                id={`item.${item.thumb}.tel`}
+                style={{ marginTop: 5 }}
+              >
                 <Text style={{ marginLeft: 2 }}>
                   <Feather name="phone" size={14} color="gray" />
                   {"  "} {item.tel}
                 </Text>
               </SharedElement>
-              <SharedElement id={`item.${item.thumb}.desc_summary`}>
+              {/* <SharedElement id={`item.${item.thumb}.desc_summary`}>
                 <Text style={{ marginLeft: 2 }}>
                   <AntDesign name="mail" size={14} color="gray" />
                   {"  "} {item.desc_summary}
                 </Text>
-              </SharedElement>
+              </SharedElement> */}
               <View style={styles.boutton}>
                 <LinearGradient
                   colors={getRandomGradient(`${item.name}`)}

@@ -16,7 +16,7 @@ function index({ navigation }) {
   };
 
   return (
-    <View style={{ width: "95%", alignSelf: "center" }}>
+    <View style={{ width: "100%", alignSelf: "center" }}>
       <SegmentedControlTab
         values={["Aujourd'hui", "Populaire", "Week-End"]}
         selectedIndex={singleIndex}

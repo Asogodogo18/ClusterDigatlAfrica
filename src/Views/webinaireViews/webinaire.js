@@ -15,7 +15,8 @@ const { width } = Dimensions.get("window");
 
 const Webinaire = ({ item, navigation }) => (
   <View style={{ padding: 10 }}>
-    <Pressable
+    <TouchableOpacity
+      activeOpacity={0.8}
       onPress={() => {
         navigation.navigate("Webinaire", {
           screen: "WebinaireDetails",
@@ -61,7 +62,7 @@ const Webinaire = ({ item, navigation }) => (
           </View>
         </View>
       </View>
-    </Pressable>
+    </TouchableOpacity>
   </View>
 );
 
@@ -116,8 +117,9 @@ const styles = StyleSheet.create({
   item: {
     height: 250,
     padding: 5,
-    marginVertical: 8,
-    marginHorizontal: 5,
+    marginVertical: 0,
+    marginHorizontal: 0,
+    alignSelf: "center",
     // flexDirection: "column",
     // borderColor: "red",
     // borderWidth: 1,
@@ -130,7 +132,7 @@ const styles = StyleSheet.create({
       width: 1,
     },
     shadowOpacity: 0.7,
-    width: width - 30,
+    width: width - 20,
   },
   title: {
     fontSize: 15,

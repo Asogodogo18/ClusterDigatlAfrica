@@ -158,8 +158,9 @@ const Index = (props) => {
                   },
                 ]}
               >
-                <Pressable
+                <TouchableOpacity
                   key={item.id}
+                  activeOpacity={0.8}
                   style={styles.item}
                   onPress={() => {
                     // navigation.setOptions({ title: `${item.title}` });
@@ -187,7 +188,7 @@ const Index = (props) => {
                   >
                     <Text style={styles.title}>{item.title}</Text>
                   </View> */}
-                </Pressable>
+                </TouchableOpacity>
               </LinearGradient>
             ))}
           </ScrollView>
@@ -199,9 +200,9 @@ const Index = (props) => {
             alignSelf: "center",
             width: 40,
             height: 5,
-            // backgroundColor: "green",
+            backgroundColor: "green",
             borderRadius: 15,
-            marginBottom: 0,
+            marginBottom: 10,
           }}
         />
         <View
