@@ -81,9 +81,12 @@ const sharedScreens = () => {
       <sharedStack.Screen
         name="Details"
         component={Details}
-        options={() => ({
-          headerShown: false,
+        options={({ route }) => ({
+          // headerShown: false,
+          title: route.params.item.title,
+          headerTitleAlign: "center",
           gestureEnabled: false,
+
           transitionSpec: {
             open: {
               animation: "timing",
@@ -156,7 +159,6 @@ const WebinaireScreen = () => {
     </WebinaireShardedStack.Navigator>
   );
 };
-
 const EventScreen = () => {
   return (
     <EventShardedStack.Navigator>
@@ -333,17 +335,6 @@ const CrowdfundingScreen = () => {
     </CrowdfundingShardedStack.Navigator>
   );
 };
-
-// const ModalScreen = () => {
-//   <Stack.Navigator>
-//     <Stack.Group screenOptions={{ presentation: "modal" }}>
-//       <Stack.Screen
-//         name="DetailsPresentation"
-//         component={DetailsPresentation}
-//       />
-//     </Stack.Group>
-//   </Stack.Navigator>;
-// };
 const index = (props) => {
   return (
     <Drawer.Navigator drawerContent={(props) => <CustonDrawer {...props} />}>

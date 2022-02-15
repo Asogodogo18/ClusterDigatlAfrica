@@ -1,4 +1,4 @@
-import { TouchableOpacity, View, Text, StyleSheet } from "react-native";
+import { TouchableOpacity, View, Text, StyleSheet, Image } from "react-native";
 import React from "react";
 
 const explore = ({ navigation }) => {
@@ -11,7 +11,17 @@ const explore = ({ navigation }) => {
         })
       }
     >
-      <View style={styles.image}></View>
+      <View style={styles.image}>
+        <Image
+          style={{
+            width: "100%",
+            height: "100%",
+            resizeMode: "cover",
+            overflow: "hidden",
+          }}
+          source={require("../../../assets/ImageEvent.jpeg")}
+        />
+      </View>
       <View style={styles.textContainer}>
         <Text style={styles.title}>CDA Cluster</Text>
         <Text style={styles.subtitle}>communauté</Text>
@@ -30,8 +40,16 @@ const styles = StyleSheet.create({
   },
   image: {
     flex: 3,
+    position: "absolute",
+    top: 0,
+    borderRadius: 15,
+    overflow: "hidden",
+    height: 140,
+    width: "100%",
   },
   textContainer: {
+    position: "absolute",
+    bottom: 0,
     flex: 1,
     justifyContent: "space-evenly",
     paddingLeft: 15,

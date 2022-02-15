@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 
-const index = () => {
+const Index = () => {
   return (
     <View style={styles.contain}>
       <Text>Pepiniere screen</Text>
@@ -17,4 +17,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default index;
+export default Index;

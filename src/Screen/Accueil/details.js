@@ -159,7 +159,7 @@ const Details = ({ navigation, route }) => {
   };
   return (
     <SafeAreaView style={styles.contain}>
-      <View
+      {/* <View
         style={{
           position: "absolute",
           padding: 1,
@@ -172,7 +172,7 @@ const Details = ({ navigation, route }) => {
         <TouchableOpacity onPress={() => navigation.goBack()}>
           <Ionicons name="arrow-back" size={30} color="black" />
         </TouchableOpacity>
-      </View>
+      </View> */}
 
       <SharedElement
         id={`item.${item.id}.Image`}
@@ -224,6 +224,7 @@ const Details = ({ navigation, route }) => {
               style={[styles.item]}
               onPress={() => {
                 activeIndex.setValue(index);
+                // navigation.setOptions({ title: `${item.title}` });
                 navigation.navigate("Details", { item: item });
               }}
             >

@@ -1,16 +1,27 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   View,
   Text,
   StyleSheet,
   ScrollView,
   SafeAreaView,
+  ActivityIndicator,
   Image,
 } from "react-native";
 import { Chip } from "react-native-paper";
+import Animated, {
+  FadeInRight,
+  FadeOutLeft,
+  BounceInRight,
+  Transition,
+} from "react-native-reanimated";
 
+import { FiltreCrowdfunding } from "../../Utils/filter";
 import Explore from "../../Views/CrowdFunding/explore";
 import Discover from "../../Views/CrowdFunding/discover";
+import FilteredView from "../../Views/CrowdFunding/FilteredView";
+import CROWDFUNDING_DATA from "../../Data/crowdfunding";
+
 const DATA = [
   {
     id: "7",
@@ -105,7 +116,18 @@ const DATA = [
 ];
 const Crowdfunding = ({ navigation }) => {
   const [IsActive, setIsActive] = useState(0);
-  const [display, setDisplay] = useState(0);
+  const [loading, setLoading] = useState(false);
+  const [filter, setFilter] = useState("");
+  const [filteredData, setfilteredData] = useState(null);
+
+  useEffect(() => {
+    setLoading(true);
+    setfilteredData(FiltreCrowdfunding(CROWDFUNDING_DATA, filter));
+    setLoading(false);
+    return () => {
+      setfilteredData(null);
+    };
+  }, [filter]);
 
   return (
     <ScrollView contentContainerStyle={styles.contain}>
@@ -117,8 +139,8 @@ const Crowdfunding = ({ navigation }) => {
               style={styles.chipItem}
               avatar={<Image source={{ uri: `${item.icon}` }} />}
               onPress={() => {
-                setIsActive(index),
-                  display !== 0 ? setDisplay(index) : setDisplay(index);
+                setIsActive(index);
+                setFilter(item.name === "Tout" ? "" : item.name);
               }}
             >
               {item.name}
@@ -126,34 +148,38 @@ const Crowdfunding = ({ navigation }) => {
           );
         })}
       </ScrollView>
-      {display == 0 && (
-        <View>
-          <View style={styles.section}>
-            <Text style={styles.sectionTitle}>Decouvrir</Text>
-            <Discover navigation={navigation} />
-          </View>
-          <View style={styles.section}>
-            <Text style={styles.sectionTitle}>Explore</Text>
-            <Explore navigation={navigation} />
-          </View>
-        </View>
-      )}
-      {display == 1 && <Text>2</Text>}
-      {display == 2 && <Text>3</Text>}
-      {display == 3 && <Text>4</Text>}
-      {display == 4 && <Text>5</Text>}
-      {display == 5 && <Text>6</Text>}
-      {display == 6 && <Text>7</Text>}
-      {display == 7 && <Text>8</Text>}
-      {display == 8 && <Text>9</Text>}
-      {display == 9 && <Text>10</Text>}
-      {display == 10 && <Text>11</Text>}
-      {display == 11 && <Text>12</Text>}
-      {display == 12 && <Text>13</Text>}
-      {display == 13 && <Text>14</Text>}
-      {display == 14 && <Text>15</Text>}
-      {display == 15 && <Text>16</Text>}
-      {display == 16 && <Text>17</Text>}
+      <Animated.View style={{ flex: 9 }}>
+        {filter === "" && (
+          <Animated.View
+            exiting={FadeOutLeft}
+            entering={BounceInRight}
+            layout={Transition}
+          >
+            <View style={styles.section}>
+              <Text style={styles.sectionTitle}>Decouvrir</Text>
+              <Discover navigation={navigation} />
+            </View>
+            <View style={styles.section}>
+              <Text style={styles.sectionTitle}>Explore</Text>
+              <Explore navigation={navigation} />
+            </View>
+          </Animated.View>
+        )}
+        {filter !== "" ? (
+          loading == true ? (
+            <Animated.View
+              exiting={FadeOutLeft}
+              entering={BounceInRight}
+              layout={Transition}
+              style={{ flex: 1, justifyContent: "center" }}
+            >
+              <ActivityIndicator size="large" color="lightgreen" />
+            </Animated.View>
+          ) : (
+            <FilteredView data={filteredData} navigation={navigation} />
+          )
+        ) : null}
+      </Animated.View>
     </ScrollView>
   );
 };
@@ -176,12 +202,12 @@ const styles = StyleSheet.create({
   },
   chip: {
     flexDirection: "row",
-    justifyContent: "space-evenly",
     padding: 2,
-    marginVertical: 5,
+    flexGrow: 1,
   },
   chipItem: {
     marginHorizontal: 5,
+    height: 40,
   },
 });
 export default Crowdfunding;

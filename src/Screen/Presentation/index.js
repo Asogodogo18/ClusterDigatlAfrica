@@ -20,7 +20,7 @@ const { height } = Dimensions.get("window");
 
 const { presentation } = PRESENTATIONDATA;
 
-const index = ({ navigation, route }) => {
+const Index = ({ navigation, route }) => {
   const [isDetailsVisible, setDetailsVisible] = useState(false);
   const [singleIndex, setsingleIndex] = useState(0);
   const onIndexChanged = (index) => {
@@ -212,4 +212,4 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
   },
 });
-export default index;
+export default Index;

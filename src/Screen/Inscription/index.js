@@ -17,7 +17,7 @@ import Header from "../../Components/header";
 import { TextInput, Divider, RadioButton } from "react-native-paper";
 const { width, height } = Dimensions.get("screen");
 
-export default function index({ navigation }) {
+export default function Index({ navigation }) {
   const [name, setName] = useState("");
   const [surname, setSurname] = useState("");
   const [Email, setEmail] = useState("");

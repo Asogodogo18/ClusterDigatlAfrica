@@ -8,7 +8,7 @@ import {
 } from "react-native";
 import { Entypo, Ionicons } from "@expo/vector-icons";
 import Contact from "../../Components/contact";
-const index = () => {
+const Index = () => {
   return (
     <ScrollView>
       <View style={styles.contain}>
@@ -115,4 +115,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default index;
+export default Index;

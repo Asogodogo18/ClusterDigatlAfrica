@@ -87,7 +87,7 @@ const Categories = [
   },
 ];
 
-const index = (props) => {
+const Index = (props) => {
   const { navigation } = props;
   const y = new Animated.Value(0);
 
@@ -162,6 +162,7 @@ const index = (props) => {
                   key={item.id}
                   style={styles.item}
                   onPress={() => {
+                    // navigation.setOptions({ title: `${item.title}` });
                     navigation.navigate("Details", { item: item });
                   }}
                 >
@@ -278,4 +279,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default index;
+export default Index;
