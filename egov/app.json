@@ -1,0 +1,40 @@
+{
+  "expo": {
+    "name": "egov",
+    "slug": "egov",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "myapp",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/images/1x/splash.png",
+      "mdpi": "./assets/images/1x/splash.png",
+      "hdpi": "./assets/images/1.5x/splash.png",
+      "xhdpi": "./assets/images/2x/splash.png",
+      "xxhdpi": "./assets/images/3x/splash.png",
+      "xxxhdpi": "./assets/images/4x/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#17435C"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.louguiman.egov"
+    },
+    "web": {
+      "favicon": "./assets/images/favicon.png"
+    }
+  }
+}

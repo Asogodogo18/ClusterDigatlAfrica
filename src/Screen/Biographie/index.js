@@ -12,8 +12,6 @@ import getRandomColor from "../../Utils/getRandomColor";
 import { SharedElement } from "react-navigation-shared-element";
 import * as Animatable from "react-native-animatable";
 import BIOGRAPHIEDATA from "../../Data/biography.json";
-import { List } from "react-native-paper";
-import CollapsibleList from "react-native-collapsible-list";
 
 const { biography } = BIOGRAPHIEDATA;
 

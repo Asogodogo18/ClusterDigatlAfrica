@@ -25,6 +25,8 @@ import Speaker from "../speaker";
 import Biographie from "../Biographie";
 import Presentation from "../Presentation";
 import { Crowdfunding } from "../crowdfunding";
+import StartUp from "../Startup";
+import Partenaire from "../Partenaire";
 
 const NAVBAR_HEIGHT = 120;
 const STATUS_BAR_HEIGHT = Platform.select({ ios: 20, android: 0 });
@@ -73,6 +75,11 @@ const Categories = [
     id: "58694a0f-3da1-471f-bd96-145571e29d25",
     title: "Start-up",
     image: require("../../../assets/icons/startup.png"),
+  },
+  {
+    id: "56gh74lm-3da1-471f-bd96-145571e29d75",
+    title: "Partenaires",
+    image: require("../../../assets/icons/partners.png"),
   },
   {
     id: "58694a0f-3da1-471f-bd96-145571e29d75",
@@ -281,6 +288,8 @@ const Details = ({ navigation, route }) => {
         {selectedItemIndex == 4 && <Speaker navigation={navigation} />}
         {selectedItemIndex == 5 && <Biographie navigation={navigation} />}
         {selectedItemIndex == 6 && <Crowdfunding navigation={navigation} />}
+        {selectedItemIndex == 7 && <StartUp navigation={navigation} />}
+        {selectedItemIndex == 8 && <Partenaire navigation={navigation} />}
       </Animated.View>
     </SafeAreaView>
   );

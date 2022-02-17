@@ -1,12 +1,19 @@
-import { View, Text } from "react-native";
+import { ScrollView, View, Text, StyleSheet } from "react-native";
 import React from "react";
 
-const index = () => {
+import Layout from "../../../Utils/Layout";
+
+const AccueilUvm = () => {
   return (
-    <View>
-      <Text>Accueil Uvn</Text>
-    </View>
+    <Layout>
+      <Text>TEST</Text>
+    </Layout>
   );
 };
 
-export default index;
+const styles = StyleSheet.create({
+  contain: {
+    flexGrow: 1,
+  },
+});
+export default AccueilUvm;

@@ -37,6 +37,7 @@
     "react-native-screens": "~3.8.0",
     "react-native-segmented-control-tab": "^4.0.0",
     "react-native-shared-element": "0.8.2",
+    "react-native-size-matters": "^0.4.0",
     "react-native-svg": "12.1.1",
     "react-native-swiper": "^1.6.0",
     "react-native-touchable-scale": "*",
@@ -46,7 +47,10 @@
     "react-navigation-stack": "^2.10.4"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.9"
+    "@babel/core": "^7.12.9",
+    "@types/react": "~17.0.21",
+    "@types/react-native": "~0.64.12",
+    "typescript": "~4.3.5"
   },
   "private": true
 }
