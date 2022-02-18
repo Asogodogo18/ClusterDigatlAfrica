@@ -1,11 +1,23 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import {
+  Animated,
+  Dimensions,
+  Image,
+  Platform,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
+import * as Animatable from "react-native-animatable";
 
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { createStackNavigator } from "@react-navigation/stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createSharedElementStackNavigator } from "react-navigation-shared-element";
-import { AntDesign } from "@expo/vector-icons";
-
+import { AntDesign, FontAwesome5, Ionicons } from "@expo/vector-icons";
+import Icon, { Icons } from "../../Utils/Icons";
+import Colors from "../../constants/Colors";
 import { enableScreens } from "react-native-screens";
 enableScreens();
 
@@ -46,6 +58,37 @@ import Cours from "../../Screen/Uvm/Cours";
 import Profile from "../../Screen/Uvm/Profile";
 import { Easing } from "react-native-reanimated";
 
+const TabArr = [
+  {
+    route: "AccueilUvm",
+    label: "Home",
+    type: Icons.FontAwesome5,
+    icon: "home",
+    component: AccueilUvm,
+  },
+  {
+    route: "Cours",
+    label: "Cours",
+    type: Icons.FontAwesome5,
+    icon: "book-reader",
+    component: Cours,
+  },
+  {
+    route: "Bibliothèque",
+    label: "Bibliothèque",
+    type: Icons.Ionicons,
+    icon: "library",
+    component: Library,
+  },
+  {
+    route: "Profile",
+    label: "Profile",
+    type: Icons.Ionicons,
+    icon: "person-sharp",
+    component: Profile,
+  },
+];
+
 const Stack = createStackNavigator();
 const BottomStack = createBottomTabNavigator();
 
@@ -56,6 +99,68 @@ const EventShardedStack = createSharedElementStackNavigator();
 const SpeakerShardedStack = createSharedElementStackNavigator();
 const BiographieShardedStack = createSharedElementStackNavigator();
 const CrowdfundingShardedStack = createSharedElementStackNavigator();
+
+const animate1 = {
+  0: { scale: 0.5, translateY: 7 },
+  0.92: { translateY: -34 },
+  1: { scale: 1.2, translateY: -24 },
+};
+const animate2 = {
+  0: { scale: 1.2, translateY: -24 },
+  1: { scale: 1, translateY: 7 },
+};
+
+const circle1 = {
+  0: { scale: 0 },
+  0.3: { scale: 0.9 },
+  0.5: { scale: 0.2 },
+  0.8: { scale: 0.7 },
+  1: { scale: 1 },
+};
+const circle2 = { 0: { scale: 1 }, 1: { scale: 0 } };
+
+const TabButton = (props) => {
+  const { item, onPress, accessibilityState } = props;
+  const focused = accessibilityState.selected;
+  const viewRef = useRef(null);
+  const circleRef = useRef(null);
+  const textRef = useRef(null);
+
+  useEffect(() => {
+    if (focused) {
+      viewRef.current.animate(animate1);
+      circleRef.current.animate(circle1);
+      textRef.current.transitionTo({ scale: 1 });
+    } else {
+      viewRef.current.animate(animate2);
+      circleRef.current.animate(circle2);
+      textRef.current.transitionTo({ scale: 0 });
+    }
+  }, [focused]);
+
+  return (
+    <TouchableOpacity
+      onPress={onPress}
+      activeOpacity={1}
+      style={styles.container}
+    >
+      <Animatable.View ref={viewRef} duration={300} style={styles.container}>
+        <View style={styles.btn}>
+          <Animatable.View ref={circleRef} style={styles.circle} />
+          <Icon
+            type={item.type}
+            name={item.icon}
+            color={focused ? Colors.white : "orange"}
+          />
+        </View>
+        <Animatable.Text ref={textRef} style={styles.text}>
+          {item.label}
+        </Animatable.Text>
+      </Animatable.View>
+    </TouchableOpacity>
+  );
+};
+
 const SharedScreens = () => {
   return (
     <sharedStack.Navigator>
@@ -350,54 +455,28 @@ const CrowdfundingScreen = () => {
 const UvmBottomStack = () => {
   return (
     <BottomStack.Navigator
-      tabBarOptions={{ activeTintColor: "tomato" }}
-      screenOptions={({ route }) => ({
-        tabBarIcon: ({ focused, color, size }) => {
-          let iconName;
-
-          if (route.name === "AcceuilUvm") {
-            iconName = focused ? "Home" : "Home";
-          }
-
-          if (route.name === "Cours") {
-            iconName = focused ? "heart" : "heart";
-          }
-
-          if (route.name === "Bibliothéque") {
-            iconName = focused ? "library" : "library";
-          }
-          if (route.name === "Profile") {
-            iconName = focused ? "home-plus" : "home-plus";
-          }
-
-          // You can return any component that you like here!
-          return <AntDesign name={iconName} size={30} color={color} />;
-        },
-      })}
+      screenOptions={{
+        headerShown: false,
+        tabBarStyle: styles.tabBar,
+      }}
     >
-      <BottomStack.Screen
-        name="AccueilUvm"
-        component={AccueilUvm}
-        options={{ headerShown: false }}
-      />
-      <BottomStack.Screen
-        name="Cours"
-        component={Cours}
-        options={{ headerShown: false }}
-      />
-      <BottomStack.Screen
-        name="Bibliothèque"
-        component={Library}
-        options={{ headerShown: false }}
-      />
-      <BottomStack.Screen
-        name="Profile"
-        component={Profile}
-        options={{ headerShown: false }}
-      />
+      {TabArr.map((item, index) => {
+        return (
+          <BottomStack.Screen
+            key={index}
+            name={item.route}
+            component={item.component}
+            options={{
+              tabBarShowLabel: false,
+              tabBarButton: (props) => <TabButton {...props} item={item} />,
+            }}
+          />
+        );
+      })}
     </BottomStack.Navigator>
   );
 };
+
 const UvmStack = () => {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
@@ -501,5 +580,43 @@ const Index = (props) => {
     </Drawer.Navigator>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  tabBar: {
+    height: 70,
+    position: "absolute",
+    bottom: 10,
+    right: 16,
+    left: 16,
+    borderRadius: 25,
+  },
+  btn: {
+    width: 50,
+    height: 50,
+    borderRadius: 25,
+    borderWidth: 4,
+    borderColor: Colors.greenAlpha,
+    backgroundColor: Colors.white,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  circle: {
+    ...StyleSheet.absoluteFillObject,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "orange",
+    borderRadius: 25,
+  },
+  text: {
+    fontSize: 10,
+    textAlign: "center",
+    color: "orange",
+  },
+});
 
 export default Index;
