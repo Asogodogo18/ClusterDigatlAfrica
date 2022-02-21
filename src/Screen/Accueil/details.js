@@ -27,6 +27,7 @@ import Presentation from "../Presentation";
 import { Crowdfunding } from "../crowdfunding";
 import StartUp from "../Startup";
 import Partenaire from "../Partenaire";
+import Uvn from "../Uvm/Onboarding";
 
 const NAVBAR_HEIGHT = 120;
 const STATUS_BAR_HEIGHT = Platform.select({ ios: 20, android: 0 });
@@ -83,13 +84,8 @@ const Categories = [
   },
   {
     id: "58694a0f-3da1-471f-bd96-145571e29d75",
-    title: "Sondage",
-    image: require("../../../assets/icons/survey3.png"),
-  },
-  {
-    id: "58694a0f-3da1-471f-bd96-145571e29f455",
-    title: "Visio",
-    image: require("../../../assets/icons/visio.png"),
+    title: "CDA Academy",
+    image: require("../../../assets/icons/logo_uvn.png"),
   },
 ];
 
@@ -290,6 +286,7 @@ const Details = ({ navigation, route }) => {
         {selectedItemIndex == 6 && <Crowdfunding navigation={navigation} />}
         {selectedItemIndex == 7 && <StartUp navigation={navigation} />}
         {selectedItemIndex == 8 && <Partenaire navigation={navigation} />}
+        {selectedItemIndex == 9 && <Uvn navigation={navigation} />}
       </Animated.View>
     </SafeAreaView>
   );

@@ -15,7 +15,8 @@ import * as Animatable from "react-native-animatable";
 import { opacity } from "react-native-redash";
 const { width, height } = Dimensions.get("screen");
 
-export default function Layout({ children, header }) {
+export default function Layout(props) {
+  const { children, header } = props;
   StatusBar.setHidden(true);
   const searchBoxRef = useRef();
   const searchBarRef = useRef();
@@ -49,6 +50,7 @@ export default function Layout({ children, header }) {
           >
             CDA Virtual Academy
           </Animatable.Text>
+
           <Animatable.View
             ref={searchBarRef}
             style={{
@@ -63,7 +65,7 @@ export default function Layout({ children, header }) {
             {!searchToggle ? (
               <AntDesign
                 name="search1"
-                size={20}
+                size={24}
                 color="black"
                 onPress={() => {
                   setSearchToggle(!searchToggle);
@@ -98,12 +100,12 @@ export default function Layout({ children, header }) {
             {Platform.OS === "ios" ? (
               <G clipPath="url(#clipPath)">
                 <Image
-                  x="0"
-                  y="0"
-                  width="100%"
-                  height="100%"
+                  x="50%"
+                  y="50%"
+                  width="50%"
+                  height="50%"
                   preserveAspectRatio="xMidYMid Meet"
-                  href={require("../../assets/uvm_banner.jpg")}
+                  href={props.icon}
                 />
               </G>
             ) : (
@@ -114,14 +116,14 @@ export default function Layout({ children, header }) {
                 width="100%"
                 height="50%"
                 preserveAspectRatio="xMidYMid slice"
-                href={require("../../assets/uvm_banner.jpg")}
+                href={props.icon}
               />
             )}
           </Svg>
         </View>
       </View>
       <ScrollView contentContainerStyles={styles.bottom}>
-        <View style={{ marginTop: 50 }}>{children}</View>
+        <View style={{ marginTop: 50 }}>{props.children}</View>
       </ScrollView>
     </View>
   );
@@ -161,5 +163,6 @@ const styles = StyleSheet.create({
     width: width - 50,
     padding: 10,
     borderRadius: 10,
+    borderColor: "orange",
   },
 });

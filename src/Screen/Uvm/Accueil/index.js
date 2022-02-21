@@ -6,7 +6,7 @@ import CardUvm from "../../../Views/UvmAccueil/cardUvm";
 
 const AccueilUvm = (props) => {
   return (
-    <Layout>
+    <Layout icon={require("../../../../assets/banner_cours.jpg")}>
       <View>
         <View style={{ flexDirection: "row", justifyContent: "space-around" }}>
           <CardUvm

@@ -1,11 +1,20 @@
 import { View, Text } from "react-native";
 import React from "react";
+import Layout from "../../../Utils/Layout";
 
 const Profile = () => {
   return (
-    <View>
-      <Text>Profile Uvn</Text>
-    </View>
+    <Layout icon={require("../../../../design/banner_profil.jpg")}>
+      <Text
+        style={{
+          justifyContent: "center",
+          alignItems: "center",
+          textAlign: "center",
+        }}
+      >
+        Profile Uvn
+      </Text>
+    </Layout>
   );
 };
 

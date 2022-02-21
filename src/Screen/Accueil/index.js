@@ -82,13 +82,8 @@ const Categories = [
   },
   {
     id: "58694a0f-3da1-471f-bd96-145571e29d75",
-    title: "Sondage",
-    image: require("../../../assets/icons/survey3.png"),
-  },
-  {
-    id: "58694a0f-3da1-471f-bd96-145571e29f455",
-    title: "Visio",
-    image: require("../../../assets/icons/visio.png"),
+    title: "CDA Academy",
+    image: require("../../../assets/icons/logo_uvn.png"),
   },
 ];
 

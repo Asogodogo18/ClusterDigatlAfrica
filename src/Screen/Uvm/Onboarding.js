@@ -174,7 +174,10 @@ const Onboarding = (props) => {
       />
       <View style={{ flex: 0.2 }}>
         <Indicator scrollX={scrollX} />
-        <Button title="Demare" onPress={() => props.navigation.push("Uvm")} />
+        <Button
+          title="Demare"
+          onPress={() => props.navigation.navigate("Uvm")}
+        />
       </View>
     </View>
   );
