@@ -1,0 +1,64 @@
+{
+ "master": [
+  {
+   "name": "MASTER PRO EN INGENIERIE DES RESEAUX INFORMATIQUES & SYSTEMES D'INFORMATION",
+   "img": "https://admission.uppkingui.com/admin/uploads/cert_images/MASTER%20PRO%20EN%20ING%C3%A9NIERIE%20DES%20R%C3%A9SEAUX%20INFORMATIQUES%20&%20SYST%C3%A8MES%20D'INFORMATION_11.jpeg",
+   "prix": "Prix: 300000 FCFA"
+  },
+  {
+   "name": "MASTER EN FINANCE (BANQUE ET ASSURANCE)",
+   "img": "https://admission.uppkingui.com/admin/uploads/cert_images/MASTER%20EN%20FINANCE%20(BANQUE%20ET%20ASSURANCE)_13.jpeg",
+   "prix": "Prix: 300000 FCFA"
+  },
+  {
+   "name": "MASTER PRO EN MARKETING COMMUNICATION",
+   "img": "https://admission.uppkingui.com/admin/uploads/cert_images/MASTER%20PRO%20EN%20MARKETING%20COMMUNICATION_15.jpeg",
+   "prix": "Prix: 300000 FCFA"
+  },
+  {
+   "name": "MASTER PROFESSIONNEL FINANCE AUDIT ET CONTRÔLE DE GESTION",
+   "img": "https://admission.uppkingui.com/admin/uploads/cert_images/MASTER%20PROFESSIONNEL%20FINANCE%20AUDIT%20ET%20CONTR%C3%B4LE%20DE%20GESTION_16.jpeg",
+   "prix": "Prix: 300000 FCFA"
+  },
+  {
+   "name": "MASTER PRO EN SECURITE RESEAUX ET TELECOMS",
+   "img": "https://admission.uppkingui.com/admin/uploads/cert_images/MASTER%20PRO%20EN%20S%C3%A9CURIT%C3%A9%20RESEAUX%20ET%20TELECOMS_24.jpeg",
+   "prix": "Prix: 300000 FCFA"
+  },
+  {
+   "name": "MASTER PROFESSIONNEL EN GESTION DES RESSOURCES HUMAINES",
+   "img": "https://admission.uppkingui.com/admin/uploads/cert_images/MASTER%20PROFESSIONNEL%20EN%20GESTION%20DES%20RESSOURCES%20HUMAINES_26.jpeg",
+   "prix": "Prix: 300000 FCFA"
+  },
+  {
+   "name": "MASTER GESTION DE PROJET",
+   "img": "https://admission.uppkingui.com/admin/uploads/cert_images/MASTER%20GESTION%20DE%20PROJET_30.jpeg",
+   "prix": "Prix: 300000 FCFA"
+  },
+  {
+   "name": "MASTER SPÉCIALITÉ : BIG DATA ANALYTICS",
+   "img": "https://admission.uppkingui.com/admin/uploads/cert_images/MASTER%20SPE%CC%81CIALITE%CC%81%20:%20BIG%20DATA%20ANALYTICS_31.jpeg",
+   "prix": "Prix: 300000 FCFA"
+  },
+  {
+   "name": "MASTER SPÉCIALITÉ BLOCKCHAIN",
+   "img": "https://admission.uppkingui.com/admin/uploads/cert_images/MASTER%20SPE%CC%81CIALITE%CC%81%20BLOCKCHAIN_32.jpeg",
+   "prix": "Prix: 300000 FCFA"
+  },
+  {
+   "name": "MASTER PRO EN MARKETING DIGITAL",
+   "img": "https://admission.uppkingui.com/admin/uploads/cert_images/MASTER%20PRO%20EN%20MARKETING%20DIGITAL_84.jpeg",
+   "prix": "Prix: 300000 FCFA"
+  },
+  {
+   "name": "MASTER ENTREPRENEURIAT INNOVATION ET CREATION DES START UP",
+   "img": "https://admission.uppkingui.com/admin/uploads/cert_images/MASTER%20ENTREPRENEURIAT%20INNOVATION%20ET%20CR%C3%A9ATION%20DES%20START%20UP_108.jpeg",
+   "prix": "Prix: 300000 FCFA"
+  }
+ ],
+ "dut":[],
+ "bts":[],
+ "licence":[],
+ "bachelor":[],
+ "mba":[]
+}

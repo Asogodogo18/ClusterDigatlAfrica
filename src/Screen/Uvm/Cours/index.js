@@ -4,9 +4,12 @@ import React from "react";
 import Layout from "../../../Utils/Layout";
 import CardUvm from "../../../Views/UvmAccueil/cardUvm";
 
-const Cours = () => {
+const Cours = ({ navigation }) => {
   return (
-    <Layout icon={require("../../../../assets/uvm_banner.jpg")}>
+    <Layout
+      navigation={navigation}
+      icon={require("../../../../assets/uvm_banner.jpg")}
+    >
       <View>
         <View style={{ flexDirection: "row", justifyContent: "space-around" }}>
           <CardUvm

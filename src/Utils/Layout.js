@@ -8,21 +8,26 @@ import {
   Platform,
   Text,
   TextInput,
+  Animated,
 } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 import Svg, { ClipPath, Defs, Path, Image, G } from "react-native-svg";
 import { AntDesign } from "@expo/vector-icons";
 import * as Animatable from "react-native-animatable";
 import { opacity } from "react-native-redash";
 const { width, height } = Dimensions.get("screen");
+const AnimatedScrollView = Animated.createAnimatedComponent(ScrollView);
 
 export default function Layout(props) {
-  const { children, header } = props;
+  const { children, header, navigation } = props;
   StatusBar.setHidden(true);
   const searchBoxRef = useRef();
   const searchBarRef = useRef();
   const titleBarRef = useRef();
   const [searchTerm, setSearchTerm] = useState("");
   const [searchToggle, setSearchToggle] = useState(false);
+  const [isTabHidden, setIsTabHidden] = useState(false);
+  const offset = useRef(new Animated.Value(0)).current;
 
   useEffect(() => {
     if (searchToggle) {
@@ -35,8 +40,46 @@ export default function Layout(props) {
     }
   }, [searchToggle]);
 
+  useEffect(() => {
+    offset.addListener(handleScroll);
+    return () => {
+      offset.removeListener(handleScroll);
+    };
+  }, [offset]);
+
+  const handleScroll = ({ value }) => {
+    if (isTabHidden === false) {
+      if (value > 100) {
+        navigation.setOptions({
+          tabBarStyle: { display: "none" },
+        });
+        setIsTabHidden(true);
+      }
+    }
+    if (isTabHidden === true && value < 100) {
+      console.log("offset-- :", value);
+      navigation.setOptions({
+        tabBarStyle: {
+          height: 70,
+          position: "absolute",
+          bottom: 20,
+          right: 16,
+          left: 16,
+          borderRadius: 25,
+        },
+      });
+      setIsTabHidden(false);
+    }
+  };
+
   return (
-    <View style={styles.container}>
+    <AnimatedScrollView
+      contentContainerStyles={styles.container}
+      onScroll={Animated.event(
+        [{ nativeEvent: { contentOffset: { y: offset } } }],
+        { useNativeDriver: false }
+      )}
+    >
       <View style={styles.top}>
         <View style={styles.nav}>
           <Animatable.Text
@@ -91,10 +134,10 @@ export default function Layout(props) {
           </Animatable.View>
         </View>
         <View style={styles.box}>
-          <Svg width={width} height="400" viewBox={`0 0 156 175`}>
+          <Svg width={width + 50} height="400" viewBox={`0 0 175 172`}>
             <Defs>
               <ClipPath id="clipPath">
-                <Path d="M 0,0 L 0,65 Q 22,75 35,60 T62,55 C85,75 110,75 125,50 C 138,30 150,30 155,30.5 L 155,0Z" />
+                <Path d="M 0,0 L 0,75 Q 22,85 35,70 T62,65 C85,85 110,85 125,60 C 138,40 150,40 155,40.5 L 155,0Z" />
               </ClipPath>
             </Defs>
             {Platform.OS === "ios" ? (
@@ -104,7 +147,7 @@ export default function Layout(props) {
                   y="50%"
                   width="50%"
                   height="50%"
-                  preserveAspectRatio="xMidYMid Meet"
+                  preserveAspectRatio="xMidYMid slice   "
                   href={props.icon}
                 />
               </G>
@@ -122,17 +165,15 @@ export default function Layout(props) {
           </Svg>
         </View>
       </View>
-      <ScrollView contentContainerStyles={styles.bottom}>
-        <View style={{ marginTop: 50 }}>{props.children}</View>
-      </ScrollView>
-    </View>
+      <View style={styles.bottom}>{props.children}</View>
+    </AnimatedScrollView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: "orange",
+    flexGrow: 1,
+    // backgroundColor: "orange",
   },
   nav: {
     height: 50,
@@ -143,13 +184,11 @@ const styles = StyleSheet.create({
   },
   top: {},
   bottom: {
-    position: "absolute",
     width: Dimensions.get("screen").width,
-    bottom: 10,
   },
   box: {
-    backgroundColor: "orange",
-    height: 120,
+    // backgroundColor: "orange",
+    height: 160,
     marginBottom: 10,
   },
   bottomWavy: {
