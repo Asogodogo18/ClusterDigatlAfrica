@@ -54,6 +54,11 @@ const Data = [
     name: "MBA",
     icon: "https://don.clusterdigitalafrica.com/upload/images/categorie/default.png",
   },
+  {
+    id: "7",
+    name: "Certification",
+    icon: "https://don.clusterdigitalafrica.com/upload/images/categorie/default.png",
+  },
 ];
 
 const AccueilUvm = ({ navigation }) => {
@@ -104,9 +109,15 @@ const AccueilUvm = ({ navigation }) => {
         {Data.map((item, index) => {
           return (
             <Chip
+              selectedColor="black"
               selected={IsActive == index ? true : false}
               style={styles.chipItem}
-              avatar={<Image source={{ uri: `${item.icon}` }} />}
+              avatar={
+                <Image
+                  source={{ uri: `${item.icon}` }}
+                  style={{ backgroundColor: "orange" }}
+                />
+              }
               onPress={() => {
                 setIsActive(index);
 
@@ -115,13 +126,22 @@ const AccueilUvm = ({ navigation }) => {
                   : setFilter(item.name.toLocaleLowerCase());
               }}
             >
-              {item.name}
+              <Text
+                style={{
+                  color: "black",
+                  fontWeight: "800",
+                  fontSize: 15,
+                  letterSpacing: -1,
+                }}
+              >
+                {item.name}
+              </Text>
             </Chip>
           );
         })}
       </ScrollView>
       <View style={{ flex: 1, justifyContent: "center" }}>
-        {filter === "" && (
+        {/* {filter === "" && (
           <Animated.View
             exiting={FadeOutLeft}
             entering={BounceInRight}
@@ -131,7 +151,7 @@ const AccueilUvm = ({ navigation }) => {
               <Text style={styles.sectionTitle}>Tester</Text>
             </View>
           </Animated.View>
-        )}
+        )} */}
         {filteredData ? (
           loading ? (
             <Animated.View
@@ -166,10 +186,16 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     padding: 2,
     flexGrow: 1,
-    height: 40,
+    height: 50,
   },
   chipItem: {
     marginHorizontal: 5,
+    padding: 5,
+    borderRadius: 20,
+    backgroundColor: "white",
+    elevation: 2,
+    minWidth: 100,
+    maxWidth: 150,
   },
 });
 export default AccueilUvm;

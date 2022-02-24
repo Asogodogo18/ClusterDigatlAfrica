@@ -74,6 +74,9 @@ export default function Layout(props) {
 
   return (
     <AnimatedScrollView
+      showsVerticalScrollIndicator={false}
+      stickyHeaderHiddenOnScroll={false}
+      stickyHeaderIndices={[1]}
       contentContainerStyles={styles.container}
       onScroll={Animated.event(
         [{ nativeEvent: { contentOffset: { y: offset } } }],

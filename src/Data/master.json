@@ -60,5 +60,183 @@
  "bts":[],
  "licence":[],
  "bachelor":[],
- "mba":[]
+ "mba":[],
+ "certification":[
+    
+    {
+        "img": "https://clusterdigitalafrica.com/assets/media/cluster/fini/cluster-6.jpeg",
+        "name": "CERTIFICATION EN BASE INFORMATIQUE",
+        "prix": "Prix: 10000 FCFA"
+       },
+       {
+        "img": "https://clusterdigitalafrica.com/assets/media/cluster/fini/cluster-6.jpeg",
+        "name": "CERTIFICATION EN TECHNIQUE D'EXPRESSION",
+        "prix": "Prix: 10000 FCFA"
+       },
+       {
+        "img": "https://clusterdigitalafrica.com/assets/media/cluster/fini/cluster-6.jpeg",
+        "name": "CERTIFICATION EN INTRODUCTION AU MANAGEMENT",
+        "prix": "Prix: 10000 FCFA"
+       },
+       {
+        "img": "https://clusterdigitalafrica.com/assets/media/cluster/fini/cluster-6.jpeg",
+        "name": "CERTIFICATION EN E-PUBLICITE",
+        "prix": "Prix: 10000 FCFA"
+       },
+       {
+        "img": "https://clusterdigitalafrica.com/assets/media/cluster/fini/cluster-6.jpeg",
+        "name": "CERTIFICATION EN STRATEGIE PUBLICITAIRE",
+        "prix": "Prix: 10000 FCFA"
+       },
+       {
+        "img": "https://clusterdigitalafrica.com/assets/media/cluster/fini/cluster-6.jpeg",
+        "name": "CERTIFICATION EN COMMUNICATION EVENEMENTIELLE",
+        "prix": "Prix: 10000 FCFA"
+       },
+       {
+        "img": "https://clusterdigitalafrica.com/assets/media/cluster/fini/cluster-6.jpeg",
+        "name": "CERTIFICATION EN MANAGEMENT DES EQUIPES",
+        "prix": "Prix: 10000 FCFA"
+       },
+       {
+        "img": "https://admission.uppkingui.com/admin/uploads/cert_images/CERTIFICATION%20EN%20LITTERATIE%20MEDIATIQUE%20ET%20ETHIQUE%20DIGITALE_112.jpeg",
+        "name": "CERTIFICATION EN LITTERATIE MEDIATIQUE ET ETHIQUE DIGITALE",
+        "prix": "Prix: 50000 FCFA"
+       },
+       {
+        "img": "https://admission.uppkingui.com/admin/uploads/cert_images/CERTIFICATION%20EN%20GESTION%20ADMINISTRATIF%20DU%20PERSONNEL%20_111.jpeg",
+        "name": "CERTIFICATION EN GESTION ADMINISTRATIVE DU PERSONNEL",
+        "prix": "Prix: 50000 FCFA"
+       },
+       {
+        "img": "https://admission.uppkingui.com/admin/uploads/cert_images/CERTIFICATION%20EN%20GESTION%20DE%20LA%20RELATION%20CLIENT%20ET%20QUALITE%20DE%20SERVICE_107.jpeg",
+        "name": "CERTIFICATION EN GESTION DE LA RELATION CLIENT ET QUALITE DE SERVICE",
+        "prix": "Prix: 15000 FCFA"
+       },
+       {
+        "img": "https://admission.uppkingui.com/admin/uploads/cert_images/CERTIFICATION%20EN%20MARKETING%20DIGITAL_106.jpeg",
+        "name": "CERTIFICATION EN MARKETING DIGITAL",
+        "prix": "Prix: 15000 FCFA"
+       },
+       {
+        "img": "https://admission.uppkingui.com/admin/uploads/cert_images/CERTIFICATION%20INITIATION%20A%20LA%20FIBRE%20OPTIQUE_105.jpeg",
+        "name": "CERTIFICATION INITIATION A LA FIBRE OPTIQUE",
+        "prix": "Prix: 75000 FCFA"
+       },
+       {
+        "img": "https://admission.uppkingui.com/admin/uploads/cert_images/CERTIFICATION%20EN%20EXCEL%20DE%20BASE%20APPLIQUEE%20A%20LA%20GESTION%20_104.jpeg",
+        "name": "CERTIFICATION EN EXCEL DE BASE APPLIQUEE A LA GESTION",
+        "prix": "Prix: 30000 FCFA"
+       },
+       {
+        "img": "https://admission.uppkingui.com/admin/uploads/cert_images/CERTIFICATION%20A%20LA%20PRATIQUE%20DE%20LA%20COMPTABILITE%20DANS%20LES%20ENTREPRISES_103.jpeg",
+        "name": "CERTIFICATION A LA PRATIQUE DE LA COMPTABILITE DANS LES ENTREPRISES",
+        "prix": "Prix: 25000 FCFA"
+       },
+       {
+        "img": "https://admission.uppkingui.com/admin/uploads/cert_images/CERTIFICAT%20D'APTITUDE%20EN%20PRISE%20DE%20PAROLE_102.jpeg",
+        "name": "CERTIFICAT D'APTITUDE EN PRISE DE PAROLE",
+        "prix": "Prix: 50000 FCFA"
+       },
+       {
+        "img": "https://admission.uppkingui.com/admin/uploads/cert_images/CERTIFICAT%20:%20PLAN%20D'AFFAIRE%20EN%2009%20ETAPES_101.jpeg",
+        "name": "CERTIFICAT : PLAN D'AFFAIRE EN 09 ETAPES",
+        "prix": "Prix: 50000 FCFA"
+       },
+       {
+        "img": "https://admission.uppkingui.com/admin/uploads/cert_images/CERTIFICATION%20%20:%20MACHINE%20LEARNING_100.jpeg",
+        "name": "CERTIFICATION : MACHINE LEARNING",
+        "prix": "Prix: 50000 FCFA"
+       },
+       {
+        "img": "https://admission.uppkingui.com/admin/uploads/cert_images/CERTIFICATION%20:%20ORGANISATION%20ET%20GESTION%20DE%20L'ENTREPRISE_99.jpeg",
+        "name": "CERTIFICATION : ORGANISATION ET GESTION DE L'ENTREPRISE",
+        "prix": "Prix: 10000 FCFA"
+       },
+       {
+        "img": "https://admission.uppkingui.com/admin/uploads/cert_images/CERTIFICATION%20:%20STRATEGIE%20DE%20COMMMUNICATION_98.jpeg",
+        "name": "CERTIFICATION : STRATEGIE DE COMMMUNICATION",
+        "prix": "Prix: 10000 FCFA"
+       },
+       {
+        "img": "https://admission.uppkingui.com/admin/uploads/cert_images/CERTIFICATION%20A%20LA%20PRATIQUE%20DE%20LA%20COMPTABILIT%C3%A9%20DANS%20LES%20ENTREPRISES_86.jpeg",
+        "name": "CERTIFICATION A LA PRATIQUE DE LA COMPTABILITÉ DANS LES ENTREPRISES",
+        "prix": "Prix: 25000 FCFA"
+       },
+       {
+        "img": "https://admission.uppkingui.com/admin/uploads/cert_images/CERTIFICATION%20SUR%20LA%20GESTION%20STRAT%C3%A9GIQUE%20DES%20RESSOURCES%20HUMAINES_85.jpeg",
+        "name": "CERTIFICATION SUR LA GESTION STRATÉGIQUE DES RESSOURCES HUMAINES",
+        "prix": "Prix: 75000 FCFA"
+       },
+       {
+        "img": "https://admission.uppkingui.com/admin/uploads/cert_images/CERTIFICATION%20EN%20EXCEL%20AVANC%C3%A9%20APPLIQU%C3%A9%20%C3%A0%20LA%20GESTION%20_74.jpeg",
+        "name": "CERTIFICATION EN EXCEL AVANCÉ APPLIQUÉ À LA GESTION",
+        "prix": "Prix: 30000 FCFA"
+       },
+       {
+        "img": "https://admission.uppkingui.com/admin/uploads/cert_images/CERTIFICATION%20EN%20COMMUNITY%20MANAGEMENT_70.jpeg",
+        "name": "CERTIFICATION EN COMMUNITY MANAGEMENT",
+        "prix": "Prix: 10000 FCFA"
+       },
+       {
+        "img": "https://admission.uppkingui.com/admin/uploads/cert_images/CERTIFICATION%20EN%20NORMALISATION%20ET%20QUALITE_68.jpeg",
+        "name": "CERTIFICATION EN NORMALISATION ET QUALITE",
+        "prix": "Prix: 50000 FCFA"
+       },
+       {
+        "img": "https://admission.uppkingui.com/admin/uploads/cert_images/CERTIFICATION%20EN%20GESTION%20DES%20RELATIONS%20SOCIALES%20ET%20DES%20CONFLITS_67.jpeg",
+        "name": "CERTIFICATION EN GESTION DES RELATIONS SOCIALES ET DES CONFLITS",
+        "prix": "Prix: 50000 FCFA"
+       },
+       {
+        "img": "https://admission.uppkingui.com/admin/uploads/cert_images/CERTIFICATION%20EN%20COMMUNICATION%20D'ENTREPRISE_64.jpeg",
+        "name": "CERTIFICATION EN COMMUNICATION D'ENTREPRISE",
+        "prix": "Prix: 10000 FCFA"
+       },
+       {
+        "img": "https://admission.uppkingui.com/admin/uploads/cert_images/CERTIFICATION%20EN%20S%C3%A9CURIT%C3%A9%20DES%20INFRASTRUCTURE%20TI_62.jpeg",
+        "name": "CERTIFICATION EN SÉCURITÉ DES INFRASTRUCTURE TI",
+        "prix": "Prix: 50000 FCFA"
+       },
+       {
+        "img": "https://admission.uppkingui.com/admin/uploads/cert_images/CERTIFICATION%20EN%20GESTION%20DES%20RESSOURCES%20HUMAINES_60.jpeg",
+        "name": "CERTIFICATION EN GESTION DES RESSOURCES HUMAINES",
+        "prix": "Prix: 50000 FCFA"
+       },
+       {
+        "img": "https://admission.uppkingui.com/admin/uploads/cert_images/CERTIFICATION%20EN%20GESTION%20DE%20PROJET%20AGILE_58.jpeg",
+        "name": "CERTIFICATION EN GESTION DE PROJET AGILE",
+        "prix": "Prix: 30000 FCFA"
+       },
+       {
+        "img": "https://admission.uppkingui.com/admin/uploads/cert_images/CERTIFICATION%20LA%20COMPTABILIT%C3%89%20G%C3%89N%C3%89RALE_52.jpeg",
+        "name": "CERTIFICATION LA COMPTABILITÉ GÉNÉRALE",
+        "prix": "Prix: 25000 FCFA"
+       },
+       {
+        "img": "https://admission.uppkingui.com/admin/uploads/cert_images/CERTIFICATION%20D%C3%89VELOPPEMENT%20WEB_50.jpeg",
+        "name": "CERTIFICATION DÉVELOPPEMENT WEB",
+        "prix": "Prix: 75000 FCFA"
+       },
+       {
+        "img": "https://admission.uppkingui.com/admin/uploads/cert_images/CERTIFICATION%20WINDOWS%20SERVER%202019%20:%20FORMATION%20COMPLETE_42.jpeg",
+        "name": "CERTIFICATION WINDOWS SERVER 2019 : FORMATION COMPLETE",
+        "prix": "Prix: 30000 FCFA"
+       },
+       {
+        "img": "https://admission.uppkingui.com/admin/uploads/cert_images/CERTIFICATION%20D'INITIATION%20EN%20N'KO%20:%20NIVEAU%203_40.jpeg",
+        "name": "CERTIFICATION D'INITIATION EN N'KO : NIVEAU 3",
+        "prix": "Prix: 20000 FCFA"
+       },
+       {
+        "img": "https://admission.uppkingui.com/admin/uploads/cert_images/CERTIFICATION%20D'INITIATION%20EN%20N'KO%20:%20NIVEAU%202_39.jpeg",
+        "name": "CERTIFICATION D'INITIATION EN N'KO : NIVEAU 2",
+        "prix": "Prix: 20000 FCFA"
+       },
+       {
+        "img": "https://admission.uppkingui.com/admin/uploads/cert_images/CERTIFICATION%20D'INITIATION%20EN%20N'KO%20:%20NIVEAU%201_38.jpeg",
+        "name": "CERTIFICATION D'INITIATION EN N'KO : NIVEAU 1",
+        "prix": "Prix: 20000 FCFA"
+       }
+ ]
 }

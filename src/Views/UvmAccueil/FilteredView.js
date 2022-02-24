@@ -14,6 +14,8 @@ import Animated, {
   Transition,
 } from "react-native-reanimated";
 
+import { SharedElement } from "react-navigation-shared-element";
+
 const FilteredView = ({ navigation, data }) => {
   return (
     <ScrollView
@@ -52,25 +54,68 @@ const FilteredView = ({ navigation, data }) => {
         )}
         {data.map((item) => {
           return (
-            <TouchableOpacity style={styles.contain}>
-              <View style={styles.image}>
-                <Image
+            <TouchableOpacity activeOpacity={0.8} style={[styles.contain]}>
+              <View style={styles.card}>
+                <View
                   style={{
-                    width: "100%",
-                    height: "100%",
-                    resizeMode: "cover",
+                    flex: 1,
+                    borderRadius: 10,
                     overflow: "hidden",
+                    margin: 10,
+                    alignSelf: "center",
+                    marginTop: 1,
                   }}
-                  source={{ uri: `${item.img}` }}
-                />
-              </View>
-              <View style={styles.textContainer}>
-                <Text style={styles.title}>
-                  {item.name.length > 30
-                    ? item.name.substring(0, 30).padEnd(33, ".")
-                    : item.name}
-                </Text>
-                <Text style={styles.subtitle}>{item.categorie}</Text>
+                >
+                  <SharedElement
+                    id={`ìtem.${item.img}.image`}
+                    style={{ width: 100, height: 100 }}
+                  >
+                    <Image
+                      style={styles.icon}
+                      source={{ uri: `${item.img}` }}
+                      resizeMode="cover"
+                    />
+                  </SharedElement>
+                </View>
+                <View
+                  style={{
+                    flex: 3,
+                  }}
+                >
+                  <SharedElement id={`ìtem.${item.img}.name`}>
+                    <Text
+                      style={{
+                        textTransform: "uppercase",
+                        fontSize: 18,
+                        color: "black",
+                        fontWeight: "700",
+                        letterSpacing: 1,
+                        textAlign: "center",
+                        marginTop: 15,
+                      }}
+                    >
+                      {item.name.length > 50
+                        ? item.name.substring(0, 40).padEnd(43, ".")
+                        : item.name}
+                    </Text>
+                  </SharedElement>
+
+                  <SharedElement id={`item.${item.img}.prix`}>
+                    <Text
+                      style={{
+                        fontSize: 10,
+                        color: "black",
+                        fontWeight: "600",
+                        letterSpacing: 0,
+                        textTransform: "uppercase",
+                        marginTop: 10,
+                        textAlign: "center",
+                      }}
+                    >
+                      {item.prix}
+                    </Text>
+                  </SharedElement>
+                </View>
               </View>
             </TouchableOpacity>
           );
@@ -82,40 +127,22 @@ const FilteredView = ({ navigation, data }) => {
 
 const styles = StyleSheet.create({
   contain: {
-    marginLeft: 10,
-    marginBottom: 5,
-    width: 160,
-    height: 220,
-    backgroundColor: "green",
-    borderRadius: 15,
-    paddingVertical: 10,
-    elevation: 4,
+    flexGrow: 1,
   },
-  image: {
-    flex: 3,
-    position: "absolute",
-    top: 0,
-    borderRadius: 15,
-    overflow: "hidden",
-    height: 140,
+  card: {
+    width: 350,
+    height: 120,
+    borderRadius: 20,
+    flexDirection: "row",
+    marginVertical: 10,
+    backgroundColor: "white",
+    elevation: 5,
+    padding: 10,
+  },
+  icon: {
     width: "100%",
-  },
-  textContainer: {
-    position: "absolute",
-    bottom: 0,
-    justifyContent: "space-evenly",
-    paddingLeft: 15,
-  },
-  title: {
-    fontSize: 16,
-    fontWeight: "700",
-    color: "white",
-  },
-  subtitle: {
-    fontSize: 14,
-    fontWeight: "400",
-    color: "white",
-    opacity: 0.8,
+    height: "100%",
+    resizeMode: "contain",
   },
 });
 
