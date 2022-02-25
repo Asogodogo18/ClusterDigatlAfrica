@@ -21,9 +21,21 @@ import Data from "../../Data/master.json";
 import Layout from "../../Utils/Layout";
 const { height } = Dimensions.get("window");
 
+import { LinearGradient } from "expo-linear-gradient";
+import Header from "../../Components/header";
+
 const Index = ({ navigation, route }) => {
-  const Card = ({ item }) => {
-    return (
+  const { item } = route.params;
+  return (
+    <View style={styles.contain}>
+      <View style={{ height: 150 }}>
+        <Header
+          icon={require("../../../assets/icons/logo_uvn.png")}
+          title="Details"
+          color="orange"
+        />
+      </View>
+
       <View style={styles.card}>
         <View
           style={{
@@ -77,27 +89,27 @@ const Index = ({ navigation, route }) => {
             </Text>
           </SharedElement>
         </View>
+
+        <LinearGradient
+          colors={["orange", "#FFFF"]}
+          start={{ x: 0.0, y: 0.0 }}
+          end={{ x: 2.0, y: 0.0 }}
+          style={styles.touch}
+        >
+          <TouchableOpacity>
+            <Text style={{ textAlign: "center", color: "white" }}>
+              S'inscrire
+            </Text>
+          </TouchableOpacity>
+        </LinearGradient>
       </View>
-    );
-  };
-  const renderCategorie = ({ item }) => <Card item={item} />;
-  return (
-    <Layout icon={require("../../../assets/category.png")}>
-      <FlatList
-        style={{ flex: 1 }}
-        showsHorizontalScrollIndicator={false}
-        data={Data["master"]}
-        renderItem={renderCategorie}
-        keyExtractor={(item) => item.id}
-      />
-    </Layout>
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
   contain: {
     flex: 1,
-    backgroundColor: "white",
   },
   card: {
     // flex: 1,
@@ -114,6 +126,14 @@ const styles = StyleSheet.create({
     width: "100%",
     height: "100%",
     resizeMode: "contain",
+  },
+  touch: {
+    height: 30,
+    width: "100%",
+    backgroundColor: "red",
+    borderRadius: 20,
+    justifyContent: "center",
+    alignSelf: "center",
   },
 });
 export default Index;

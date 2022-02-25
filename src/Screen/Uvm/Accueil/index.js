@@ -6,6 +6,7 @@ import {
   StyleSheet,
   TouchableOpacity,
   Image,
+  Platform,
 } from "react-native";
 import Animated, {
   FadeInRight,
@@ -13,6 +14,8 @@ import Animated, {
   BounceInRight,
   Transition,
 } from "react-native-reanimated";
+
+import { LinearGradient } from "expo-linear-gradient";
 
 import { AntDesign } from "@expo/vector-icons";
 
@@ -108,35 +111,50 @@ const AccueilUvm = ({ navigation }) => {
       >
         {Data.map((item, index) => {
           return (
-            <Chip
-              selectedColor="black"
-              selected={IsActive == index ? true : false}
-              style={styles.chipItem}
-              avatar={
-                <Image
-                  source={{ uri: `${item.icon}` }}
-                  style={{ backgroundColor: "orange" }}
-                />
-              }
-              onPress={() => {
-                setIsActive(index);
-
-                item.name.toLowerCase() === filter.toLowerCase()
-                  ? null
-                  : setFilter(item.name.toLocaleLowerCase());
+            <LinearGradient
+              colors={["orange", "#FFFF"]}
+              start={{ x: 0.0, y: 0.0 }}
+              end={{ x: 2.5, y: 0.0 }}
+              style={{
+                marginHorizontal: 5,
+                padding: 5,
+                overflow: "hidden",
+                elevation: 2,
+                minWidth: 100,
+                maxWidth: 150,
+                borderRadius: Platform.OS == "ios" ? 20 : 50,
               }}
             >
-              <Text
-                style={{
-                  color: "black",
-                  fontWeight: "800",
-                  fontSize: 15,
-                  letterSpacing: -1,
+              <Chip
+                selectedColor="black"
+                selected={IsActive == index ? true : false}
+                style={styles.chipItem}
+                avatar={
+                  <Image
+                    source={{ uri: `${item.icon}` }}
+                    style={{ backgroundColor: "white" }}
+                  />
+                }
+                onPress={() => {
+                  setIsActive(index);
+
+                  item.name.toLowerCase() === filter.toLowerCase()
+                    ? null
+                    : setFilter(item.name.toLocaleLowerCase());
                 }}
               >
-                {item.name}
-              </Text>
-            </Chip>
+                <Text
+                  style={{
+                    color: "white",
+                    fontWeight: "800",
+                    fontSize: 15,
+                    letterSpacing: -1,
+                  }}
+                >
+                  {item.name}
+                </Text>
+              </Chip>
+            </LinearGradient>
           );
         })}
       </ScrollView>
@@ -189,13 +207,7 @@ const styles = StyleSheet.create({
     height: 50,
   },
   chipItem: {
-    marginHorizontal: 5,
-    padding: 5,
-    borderRadius: 20,
-    backgroundColor: "white",
-    elevation: 2,
-    minWidth: 100,
-    maxWidth: 150,
+    backgroundColor: "transparent",
   },
 });
 export default AccueilUvm;

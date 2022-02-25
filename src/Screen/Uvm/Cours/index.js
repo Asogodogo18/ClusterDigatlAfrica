@@ -11,60 +11,16 @@ const Cours = ({ navigation }) => {
       icon={require("../../../../assets/uvm_banner.jpg")}
     >
       <View>
-        <View style={{ flexDirection: "row", justifyContent: "space-around" }}>
-          <CardUvm
-            title="programmation"
-            icon={require("../../../../assets/icons/programmatio.png")}
-          />
-          <CardUvm
-            title="UX/UI Design"
-            icon={require("../../../../assets/icons/ux.png")}
-          />
-        </View>
-        <View
-          style={{
-            flexDirection: "row",
-            justifyContent: "space-around",
-            margin: 10,
-          }}
-        >
-          <CardUvm
-            title="Graphic Design"
-            icon={require("../../../../assets/icons/graphic.png")}
-          />
-          <CardUvm
-            title="Mathématique"
-            icon={require("../../../../assets/icons/mathematique.png")}
-          />
-        </View>
-      </View>
-      <View>
-        <View style={{ flexDirection: "row", justifyContent: "space-around" }}>
-          <CardUvm
-            title="programmation"
-            icon={require("../../../../assets/icons/programmatio.png")}
-          />
-          <CardUvm
-            title="UX/UI Design"
-            icon={require("../../../../assets/icons/ux.png")}
-          />
-        </View>
-        <View
-          style={{
-            flexDirection: "row",
-            justifyContent: "space-around",
-            margin: 10,
-          }}
-        >
-          <CardUvm
-            title="Graphic Design"
-            icon={require("../../../../assets/icons/graphic.png")}
-          />
-          <CardUvm
-            title="Mathématique"
-            icon={require("../../../../assets/icons/mathematique.png")}
-          />
-        </View>
+        <CardUvm
+          title="programmation"
+          icon={require("../../../../assets/icons/programmatio.png")}
+          subtile="abba"
+        />
+        <CardUvm
+          title="UX/UI Design"
+          icon={require("../../../../assets/icons/ux.png")}
+          subtile="abba"
+        />
       </View>
     </Layout>
   );

@@ -49,14 +49,14 @@ export default function Layout(props) {
 
   const handleScroll = ({ value }) => {
     if (isTabHidden === false) {
-      if (value > 100) {
+      if (value > 10) {
         navigation.setOptions({
           tabBarStyle: { display: "none" },
         });
         setIsTabHidden(true);
       }
     }
-    if (isTabHidden === true && value < 100) {
+    if (isTabHidden === true && value < 10) {
       console.log("offset-- :", value);
       navigation.setOptions({
         tabBarStyle: {
@@ -75,8 +75,8 @@ export default function Layout(props) {
   return (
     <AnimatedScrollView
       showsVerticalScrollIndicator={false}
-      stickyHeaderHiddenOnScroll={false}
-      stickyHeaderIndices={[1]}
+      stickyHeaderHiddenOnScroll={true}
+      stickyHeaderIndices={[]}
       contentContainerStyles={styles.container}
       onScroll={Animated.event(
         [{ nativeEvent: { contentOffset: { y: offset } } }],

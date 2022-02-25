@@ -45,6 +45,7 @@ const FilteredView = ({ navigation, data }) => {
                 fontWeight: "700",
                 textAlign: "center",
                 textTransform: "capitalize",
+                justifyContent: "center",
               }}
             >
               {" "}
@@ -54,7 +55,13 @@ const FilteredView = ({ navigation, data }) => {
         )}
         {data.map((item) => {
           return (
-            <TouchableOpacity activeOpacity={0.8} style={[styles.contain]}>
+            <TouchableOpacity
+              onPress={() => {
+                navigation.navigate("Categorie", { item: item });
+              }}
+              activeOpacity={0.8}
+              style={[styles.contain]}
+            >
               <View style={styles.card}>
                 <View
                   style={{

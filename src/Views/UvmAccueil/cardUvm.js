@@ -13,6 +13,7 @@ import Animated, {
   BounceInRight,
   Transition,
 } from "react-native-reanimated";
+import { Feather, FontAwesome5 } from "@expo/vector-icons";
 
 const Touch = Animated.createAnimatedComponent(TouchableOpacity);
 
@@ -24,11 +25,6 @@ const CardUvm = (props) => {
         entering={BounceInRight}
         layout={Transition}
         style={styles.contain}
-        // onPress={() =>
-        //   navigation.navigate("Crowdfunding", {
-        //     screen: "CrowdfundingDetails",
-        //   })
-        // }
       >
         <View style={styles.image}>
           <Image
@@ -44,6 +40,38 @@ const CardUvm = (props) => {
         <View style={styles.textContainer}>
           <Text style={styles.title}>{props.title}</Text>
           <Text style={styles.subtitle}>{props.subtile}</Text>
+          <View style={{ flexDirection: "row", flex: 1 }}>
+            <View
+              style={{
+                flexDirection: "row",
+                flex: 1,
+                justifyContent: "space-around",
+              }}
+            >
+              <FontAwesome5
+                name="signal"
+                size={20}
+                color="black"
+                style={{ marginTop: 2 }}
+              />
+              <Text style={{ marginRight: 25, padding: 2 }}>Facile</Text>
+            </View>
+            <View
+              style={{
+                flexDirection: "row",
+                flex: 1,
+                justifyContent: "space-around",
+              }}
+            >
+              <Feather
+                name="clock"
+                size={24}
+                color="black"
+                style={{ marginTop: 2 }}
+              />
+              <Text style={{ marginRight: 25, padding: 2 }}>20 Heure</Text>
+            </View>
+          </View>
         </View>
       </Touch>
     </Animated.View>
@@ -52,32 +80,36 @@ const CardUvm = (props) => {
 
 const styles = StyleSheet.create({
   contain: {
-    width: 160,
-    height: 195,
+    width: "90%",
+    height: 95,
     backgroundColor: "white",
-    borderRadius: 30,
+    borderRadius: 20,
     paddingVertical: 10,
     elevation: 4,
+    flexDirection: "row",
+    margin: 10,
+    marginTop: 10,
+    alignSelf: "center",
   },
   image: {
-    flex: 0,
+    flex: 1,
     position: "absolute",
-    top: 10,
+    top: 20,
+    left: 10,
     borderRadius: 50,
     overflow: "hidden",
-    height: 100,
-    width: 100,
+    height: 50,
+    width: 50,
     alignSelf: "center",
     backgroundColor: "orange",
-    padding: 20,
+    padding: 5,
     elevation: 5,
   },
   textContainer: {
-    position: "absolute",
-    bottom: 30,
+    bottom: 0,
     flex: 1,
     justifyContent: "space-evenly",
-    paddingLeft: 15,
+    paddingLeft: 80,
   },
   title: {
     fontSize: 18,

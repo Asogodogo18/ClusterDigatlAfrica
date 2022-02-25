@@ -17,6 +17,7 @@ const Webinaires = (props) => {
         <Header
           title="Webinaire"
           icon={require("../../../assets/icons/webinaire.png")}
+          color="#28a745"
         />
       </View>
       <ScrollView contentContainerStyle={{ flexGrow: 1 }}>

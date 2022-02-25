@@ -10,6 +10,7 @@ const Event = (props) => {
         <Header
           title="Evenements"
           icon={require("../../../assets/icons/event.png")}
+          color="#28a745"
         />
       </View>
       <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
