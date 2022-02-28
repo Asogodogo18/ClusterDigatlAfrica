@@ -57,7 +57,7 @@ const FilteredView = ({ navigation, data }) => {
           return (
             <TouchableOpacity
               onPress={() => {
-                navigation.navigate("Categorie", { item: item });
+                navigation.navigate("Course");
               }}
               activeOpacity={0.8}
               style={[styles.contain]}

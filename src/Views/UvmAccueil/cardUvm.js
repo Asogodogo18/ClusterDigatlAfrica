@@ -14,10 +14,12 @@ import Animated, {
   Transition,
 } from "react-native-reanimated";
 import { Feather, FontAwesome5 } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
 
 const Touch = Animated.createAnimatedComponent(TouchableOpacity);
 
 const CardUvm = (props) => {
+  const Navigation = useNavigation();
   return (
     <Animated.View>
       <Touch
@@ -25,6 +27,9 @@ const CardUvm = (props) => {
         entering={BounceInRight}
         layout={Transition}
         style={styles.contain}
+        onPress={() => {
+          Navigation.navigate("Course");
+        }}
       >
         <View style={styles.image}>
           <Image
@@ -54,7 +59,7 @@ const CardUvm = (props) => {
                 color="black"
                 style={{ marginTop: 2 }}
               />
-              <Text style={{ marginRight: 25, padding: 2 }}>Facile</Text>
+              <Text style={{ marginRight: 30, padding: 5 }}>{props.text}</Text>
             </View>
             <View
               style={{
@@ -69,7 +74,7 @@ const CardUvm = (props) => {
                 color="black"
                 style={{ marginTop: 2 }}
               />
-              <Text style={{ marginRight: 25, padding: 2 }}>20 Heure</Text>
+              <Text style={{ marginRight: 30, padding: 5 }}>{props.heure}</Text>
             </View>
           </View>
         </View>
@@ -94,9 +99,9 @@ const styles = StyleSheet.create({
   image: {
     flex: 1,
     position: "absolute",
-    top: 20,
+    top: 25,
     left: 10,
-    borderRadius: 50,
+    borderRadius: 10,
     overflow: "hidden",
     height: 50,
     width: 50,

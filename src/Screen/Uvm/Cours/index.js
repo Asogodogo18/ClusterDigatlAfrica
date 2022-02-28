@@ -14,12 +14,30 @@ const Cours = ({ navigation }) => {
         <CardUvm
           title="programmation"
           icon={require("../../../../assets/icons/programmatio.png")}
-          subtile="abba"
+          subtile="195 /Cours"
+          heure="20 Heure"
+          text="facile"
         />
         <CardUvm
           title="UX/UI Design"
           icon={require("../../../../assets/icons/ux.png")}
-          subtile="abba"
+          subtile="185 /Cours"
+          heure="20 Heure"
+          text="Moyenne"
+        />
+        <CardUvm
+          title="programmation"
+          icon={require("../../../../assets/icons/programmatio.png")}
+          subtile="195 /Cours"
+          heure="20 Heure"
+          text="facile"
+        />
+        <CardUvm
+          title="UX/UI Design"
+          icon={require("../../../../assets/icons/ux.png")}
+          subtile="185 /Cours"
+          heure="20 Heure"
+          text="Moyenne"
         />
       </View>
     </Layout>

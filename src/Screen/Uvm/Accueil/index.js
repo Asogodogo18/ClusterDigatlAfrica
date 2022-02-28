@@ -17,7 +17,7 @@ import Animated, {
 
 import { LinearGradient } from "expo-linear-gradient";
 
-import { AntDesign } from "@expo/vector-icons";
+import { Ionicons } from "@expo/vector-icons";
 
 import Layout from "../../../Utils/Layout";
 
@@ -111,50 +111,44 @@ const AccueilUvm = ({ navigation }) => {
       >
         {Data.map((item, index) => {
           return (
-            <LinearGradient
-              colors={["orange", "#FFFF"]}
-              start={{ x: 0.0, y: 0.0 }}
-              end={{ x: 2.5, y: 0.0 }}
-              style={{
-                marginHorizontal: 5,
-                padding: 5,
-                overflow: "hidden",
-                elevation: 2,
-                minWidth: 100,
-                maxWidth: 150,
-                borderRadius: Platform.OS == "ios" ? 20 : 50,
+            <Chip
+              selectedColor="black"
+              selected={IsActive == index ? true : false}
+              style={styles.chipItem}
+              avatar={
+                <Ionicons
+                  name="school"
+                  size={20}
+                  color="white"
+                  style={{
+                    backgroundColor: "orange",
+                    padding: 2,
+                  }}
+                />
+                // <Image
+                //   source={{ uri: `${item.icon}` }}
+                //   style={{ backgroundColor: "orange" }}
+                // />
+              }
+              onPress={() => {
+                setIsActive(index);
+
+                item.name.toLowerCase() === filter.toLowerCase()
+                  ? null
+                  : setFilter(item.name.toLocaleLowerCase());
               }}
             >
-              <Chip
-                selectedColor="black"
-                selected={IsActive == index ? true : false}
-                style={styles.chipItem}
-                avatar={
-                  <Image
-                    source={{ uri: `${item.icon}` }}
-                    style={{ backgroundColor: "white" }}
-                  />
-                }
-                onPress={() => {
-                  setIsActive(index);
-
-                  item.name.toLowerCase() === filter.toLowerCase()
-                    ? null
-                    : setFilter(item.name.toLocaleLowerCase());
+              <Text
+                style={{
+                  color: "black",
+                  fontWeight: "800",
+                  fontSize: 15,
+                  letterSpacing: -1,
                 }}
               >
-                <Text
-                  style={{
-                    color: "white",
-                    fontWeight: "800",
-                    fontSize: 15,
-                    letterSpacing: -1,
-                  }}
-                >
-                  {item.name}
-                </Text>
-              </Chip>
-            </LinearGradient>
+                {item.name}
+              </Text>
+            </Chip>
           );
         })}
       </ScrollView>
@@ -204,10 +198,21 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     padding: 2,
     flexGrow: 1,
-    height: 50,
+    height: 40,
   },
   chipItem: {
-    backgroundColor: "transparent",
+    justifyContent: "center",
+    borderWidth: 0.5,
+    borderColor: "orange",
+    marginHorizontal: 5,
+    padding: 5,
+    overflow: "hidden",
+    elevation: 2,
+    minWidth: 80,
+    maxWidth: 150,
+    borderRadius: Platform.OS == "ios" ? 20 : 50,
+    backgroundColor: "white",
+    elevation: 5,
   },
 });
 export default AccueilUvm;
