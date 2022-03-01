@@ -25,12 +25,7 @@ const Cours = ({ navigation }) => {
     setsingleIndex(index);
   };
   return (
-    <ScrollView
-      //   showsVerticalScrollIndicator={false}
-      //   stickyHeaderHiddenOnScroll={true}
-      //   stickyHeaderIndices={[0]}
-      contentContainerStyle={styles.contain}
-    >
+    <ScrollView contentContainerStyle={styles.contain}>
       <TouchableOpacity
         style={{
           position: "absolute",
@@ -59,9 +54,14 @@ const Cours = ({ navigation }) => {
       <View style={styles.section1}>
         <Image
           resizeMode="cover"
-          source={require("../../../assets/uvm_banner.jpg")}
-          style={{ height: height / 2.5, width: width }}
+          source={require("../../../assets/banner.png")}
+          style={{
+            height: height / 2.5,
+            width: width - 5,
+            alignSelf: "center",
+          }}
         />
+
         <View style={styles.header}>
           <Text style={{ fontSize: 18, fontWeight: "bold", padding: 10 }}>
             Titre du couts
@@ -112,7 +112,12 @@ const Cours = ({ navigation }) => {
               alignSelf: "center",
             }}
           >
-            <TouchableOpacity style={styles.touch}>
+            <TouchableOpacity
+              style={styles.touch}
+              onPress={() => {
+                navigation.navigate("CoursView");
+              }}
+            >
               <Text style={styles.text}>Commencé</Text>
             </TouchableOpacity>
           </View>
@@ -175,7 +180,12 @@ const Cours = ({ navigation }) => {
             alignSelf: "center",
           }}
         >
-          <TouchableOpacity style={styles.touch}>
+          <TouchableOpacity
+            style={styles.touch}
+            onPress={() => {
+              navigation.navigate("CoursView");
+            }}
+          >
             <Text style={styles.text}>Commencé</Text>
           </TouchableOpacity>
         </View>
@@ -191,6 +201,7 @@ const styles = StyleSheet.create({
   },
   section1: {
     flex: 2,
+    backgroundColor: "white",
   },
   section2: {
     height: height - footerHeight - 45,

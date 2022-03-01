@@ -7,6 +7,8 @@ import {
 } from "react-native";
 import React from "react";
 import { FontAwesome5 } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
+
 const Data = [
   {
     id: "1",
@@ -65,6 +67,7 @@ const Data = [
 ];
 
 export default function TableMatiere() {
+  const Navigation = useNavigation();
   const renderItem = ({ item }) => {
     const { chapitre } = item;
     return (
@@ -79,6 +82,9 @@ export default function TableMatiere() {
           {chapitre.map((en) => {
             return (
               <TouchableOpacity
+                onPress={() => {
+                  Navigation.navigate("CoursView");
+                }}
                 style={{
                   alignItems: "center",
                   height: 70,

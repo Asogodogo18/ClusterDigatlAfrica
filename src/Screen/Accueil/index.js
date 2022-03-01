@@ -126,7 +126,7 @@ const Index = (props) => {
         contentContainerStyle={{
           marginTop: Platform.OS == "ios" ? 45 : 60,
           flexGrow: 1,
-          paddingBottom: 45,
+          paddingBottom: 60,
         }}
       >
         <ImageSlider data={Data} style={{ flexGrow: 1, height: 250 }} />

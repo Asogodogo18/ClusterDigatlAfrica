@@ -58,6 +58,7 @@ import Cours from "../../Screen/Uvm/Cours";
 import Profile from "../../Screen/Uvm/Profile";
 import uvmCategorie from "../../Views/UvmCategorie";
 import Course from "../../Views/UvmCours";
+import CoursView from "../../Views/UvmCours/CoursView";
 import { Easing } from "react-native-reanimated";
 
 const TabArr = [
@@ -486,6 +487,7 @@ const UvmStack = () => {
       <Stack.Screen name="Uvm" component={UvmBottomStack} />
       <Stack.Screen name="Categorie" component={uvmCategorie} />
       <Stack.Screen name="Course" component={Course} />
+      <Stack.Screen name="CoursView" component={CoursView} />
     </Stack.Navigator>
   );
 };
