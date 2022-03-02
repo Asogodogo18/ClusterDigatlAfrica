@@ -137,7 +137,7 @@ const Profile = ({ navigation }) => {
       <Divider
         style={{
           marginBottom: 5,
-          width: "50%",
+          width: "51%",
           alignSelf: "center",
           height: 1.5,
           backgroundColor: "orange",
