@@ -125,10 +125,6 @@ const AccueilUvm = ({ navigation }) => {
                     padding: 2,
                   }}
                 />
-                // <Image
-                //   source={{ uri: `${item.icon}` }}
-                //   style={{ backgroundColor: "orange" }}
-                // />
               }
               onPress={() => {
                 setIsActive(index);
@@ -141,9 +137,9 @@ const AccueilUvm = ({ navigation }) => {
               <Text
                 style={{
                   color: "black",
-                  fontWeight: "800",
+                  fontWeight: Platform.OS === "ios" ? "500" : "800",
                   fontSize: 15,
-                  letterSpacing: -1,
+                  letterSpacing: 1,
                 }}
               >
                 {item.name}
@@ -153,17 +149,6 @@ const AccueilUvm = ({ navigation }) => {
         })}
       </ScrollView>
       <View style={{ flex: 1, justifyContent: "center" }}>
-        {/* {filter === "" && (
-          <Animated.View
-            exiting={FadeOutLeft}
-            entering={BounceInRight}
-            layout={Transition}
-          >
-            <View style={styles.section}>
-              <Text style={styles.sectionTitle}>Tester</Text>
-            </View>
-          </Animated.View>
-        )} */}
         {filteredData ? (
           loading ? (
             <Animated.View
@@ -207,12 +192,11 @@ const styles = StyleSheet.create({
     marginHorizontal: 5,
     padding: 5,
     overflow: "hidden",
-    elevation: 2,
     minWidth: 80,
     maxWidth: 150,
     borderRadius: Platform.OS == "ios" ? 20 : 50,
     backgroundColor: "white",
-    elevation: 5,
+    elevation: Platform.OS == "ios" ? 20 : 5,
   },
 });
 export default AccueilUvm;

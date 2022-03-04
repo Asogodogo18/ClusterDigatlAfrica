@@ -56,7 +56,7 @@ export default function Layout(props) {
         setIsTabHidden(true);
       }
     }
-    if (isTabHidden === true && value < 10) {
+    if (isTabHidden === true && value < 50) {
       console.log("offset-- :", value);
       navigation.setOptions({
         tabBarStyle: {
@@ -74,9 +74,9 @@ export default function Layout(props) {
 
   return (
     <AnimatedScrollView
-      showsVerticalScrollIndicator={false}
-      stickyHeaderHiddenOnScroll={true}
-      stickyHeaderIndices={[]}
+      // showsVerticalScrollIndicator={false}
+      // stickyHeaderHiddenOnScroll={true}
+      // stickyHeaderIndices={[]}
       contentContainerStyles={styles.container}
       onScroll={Animated.event(
         [{ nativeEvent: { contentOffset: { y: offset } } }],
@@ -146,11 +146,11 @@ export default function Layout(props) {
             {Platform.OS === "ios" ? (
               <G clipPath="url(#clipPath)">
                 <Image
-                  x="50%"
-                  y="50%"
-                  width="50%"
-                  height="50%"
-                  preserveAspectRatio="xMidYMid slice   "
+                  x="0"
+                  y="0"
+                  width="100%"
+                  height={90}
+                  preserveAspectRatio="xMidYMid slice"
                   href={props.icon}
                 />
               </G>
@@ -176,7 +176,7 @@ export default function Layout(props) {
 const styles = StyleSheet.create({
   container: {
     flexGrow: 1,
-    // backgroundColor: "orange",
+    backgroundColor: "red",
   },
   nav: {
     height: 50,
@@ -185,7 +185,9 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: "white",
   },
-  top: {},
+  top: {
+    marginTop: Platform.OS === "ios" ? 30 : 0,
+  },
   bottom: {
     width: Dimensions.get("screen").width,
   },

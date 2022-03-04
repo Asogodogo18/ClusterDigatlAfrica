@@ -1,6 +1,5 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
-  Animated,
   Dimensions,
   Image,
   Platform,
@@ -10,8 +9,11 @@ import {
   View,
 } from "react-native";
 import * as Animatable from "react-native-animatable";
-
-import { createDrawerNavigator } from "@react-navigation/drawer";
+import { LinearGradient } from "expo-linear-gradient";
+import {
+  createDrawerNavigator,
+  useDrawerStatus,
+} from "@react-navigation/drawer";
 import { createStackNavigator } from "@react-navigation/stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createSharedElementStackNavigator } from "react-navigation-shared-element";
@@ -59,7 +61,14 @@ import Profile from "../../Screen/Uvm/Profile";
 import uvmCategorie from "../../Views/UvmCategorie";
 import Course from "../../Views/UvmCours";
 import CoursView from "../../Views/UvmCours/CoursView";
-import { Easing } from "react-native-reanimated";
+import Animated, {
+  Easing,
+  useSharedValue,
+  withTiming,
+  useAnimatedStyle,
+  interpolate,
+  Extrapolate,
+} from "react-native-reanimated";
 
 const TabArr = [
   {
@@ -491,115 +500,186 @@ const UvmStack = () => {
     </Stack.Navigator>
   );
 };
+const Screens = ({ navigation }) => {
+  const isDrawerOpen = useDrawerStatus();
+  const sv = useSharedValue(0);
+  useEffect(() => {
+    if (isDrawerOpen === "open") {
+      sv.value = withTiming(1);
+    } else {
+      sv.value = withTiming(0);
+    }
+  }, [isDrawerOpen]);
+
+  const screenStyle = useAnimatedStyle(() => {
+    const scale = interpolate(sv.value, [0, 1], [1, 0.7], {
+      extrapolateRight: Extrapolate.CLAMP,
+    });
+
+    const borderRadius = interpolate(sv.value, [0, 1], [0, 20], {
+      extrapolateRight: Extrapolate.CLAMP,
+    });
+    return { borderRadius, transform: [{ scale }] };
+  });
+
+  return (
+    <Animated.View style={[styles.stack, screenStyle]}>
+      <Stack.Navigator
+        screenOptions={{
+          headerLeft: () => {
+            <TouchableOpacity
+              style={{
+                elevation: 10,
+                position: "absolute",
+                top: 10,
+                right: 20,
+              }}
+              onPress={navigation.toggleDrawer}
+            >
+              <Ionicons name="menu-outline" size={24} color="black" />
+            </TouchableOpacity>;
+          },
+        }}
+      >
+        <Stack.Screen
+          name="Accueil"
+          component={SharedScreens}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Speaker"
+          component={SpeakerScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Biographie"
+          component={BiographieScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Crowdfunding"
+          component={CrowdfundingScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Presentation"
+          component={Presentation}
+          options={{ headerShown: false }}
+        />
+
+        <Stack.Screen
+          name="Start-Up"
+          component={StartUp}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Partenaire"
+          component={Partenaire}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="UvmScreen"
+          component={UvmStack}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen name="Pepinier" component={Pepinier} />
+        <Stack.Screen name="Contact" component={Contact} />
+        <Stack.Screen
+          name="Webinaire"
+          component={WebinaireScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Event"
+          component={EventScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Group screenOptions={{ presentation: "modal" }}>
+          <Stack.Screen
+            name="MembreDetails"
+            component={MembreDetails}
+            options={{ headerShown: false }}
+          />
+        </Stack.Group>
+        <Stack.Group screenOptions={{ presentation: "modal" }}>
+          <Stack.Screen
+            name="DetailsPresentation"
+            component={DetailsPresentation}
+            options={{ headerShown: false }}
+          />
+        </Stack.Group>
+        <Stack.Group screenOptions={{ presentation: "modal" }}>
+          <Stack.Screen
+            name="Inscription"
+            component={Inscriptions}
+            options={{ headerShown: false }}
+          />
+        </Stack.Group>
+        <Stack.Group screenOptions={{ presentation: "modal" }}>
+          <Stack.Screen
+            name="DetailStartUp"
+            component={DetailStartUp}
+            options={{ headerShown: false }}
+          />
+        </Stack.Group>
+        <Stack.Group screenOptions={{ presentation: "modal" }}>
+          <Stack.Screen
+            name="DetailPartenaire"
+            component={DetailPartenaire}
+            options={{ headerShown: false }}
+          />
+        </Stack.Group>
+      </Stack.Navigator>
+    </Animated.View>
+  );
+};
 
 const Index = (props) => {
   return (
-    <Drawer.Navigator drawerContent={(props) => <CustonDrawer {...props} />}>
-      <Drawer.Screen
-        name="Accueil"
-        component={SharedScreens}
-        options={{ headerShown: false }}
-      />
-      <Drawer.Screen
-        name="Speaker"
-        component={SpeakerScreen}
-        options={{ headerShown: false }}
-      />
-      <Drawer.Screen
-        name="Biographie"
-        component={BiographieScreen}
-        options={{ headerShown: false }}
-      />
-      <Drawer.Screen
-        name="Crowdfunding"
-        component={CrowdfundingScreen}
-        options={{ headerShown: false }}
-      />
-      <Drawer.Screen
-        name="Presentation"
-        component={Presentation}
-        options={{ headerShown: false }}
-      />
-
-      <Drawer.Screen
-        name="Start-Up"
-        component={StartUp}
-        options={{ headerShown: false }}
-      />
-      <Drawer.Screen
-        name="Partenaire"
-        component={Partenaire}
-        options={{ headerShown: false }}
-      />
-      <Drawer.Screen
-        name="Uvm"
-        component={UvmStack}
-        options={{ headerShown: false }}
-      />
-      <Drawer.Screen name="Pepinier" component={Pepinier} />
-      <Drawer.Screen name="Contact" component={Contact} />
-      <Drawer.Screen
-        name="Webinaire"
-        component={WebinaireScreen}
-        options={{ headerShown: false }}
-      />
-      <Drawer.Screen
-        name="Event"
-        component={EventScreen}
-        options={{ headerShown: false }}
-      />
-      <Drawer.Group screenOptions={{ presentation: "modal" }}>
-        <Drawer.Screen
-          name="MembreDetails"
-          component={MembreDetails}
-          options={{ headerShown: false }}
-        />
-      </Drawer.Group>
-      <Drawer.Group screenOptions={{ presentation: "modal" }}>
-        <Drawer.Screen
-          name="DetailsPresentation"
-          component={DetailsPresentation}
-          options={{ headerShown: false }}
-        />
-      </Drawer.Group>
-      <Drawer.Group screenOptions={{ presentation: "modal" }}>
-        <Drawer.Screen
-          name="Inscription"
-          component={Inscriptions}
-          options={{ headerShown: false }}
-        />
-      </Drawer.Group>
-      <Drawer.Group screenOptions={{ presentation: "modal" }}>
-        <Drawer.Screen
-          name="DetailStartUp"
-          component={DetailStartUp}
-          options={{ headerShown: false }}
-        />
-      </Drawer.Group>
-      <Drawer.Group screenOptions={{ presentation: "modal" }}>
-        <Drawer.Screen
-          name="DetailPartenaire"
-          component={DetailPartenaire}
-          options={{ headerShown: false }}
-        />
-      </Drawer.Group>
-    </Drawer.Navigator>
+    <LinearGradient style={{ flex: 1 }} colors={["#b0f3f1", "#ffcfbf"]}>
+      <Drawer.Navigator
+        backBehavior="none"
+        drawerContentOptions={{
+          activeBackgroundColor: "transparent",
+          activeTintColor: "white",
+          inactiveTintColor: "white",
+        }}
+        screenOptions={{
+          headerShown: false,
+          headerBackground: () => <View style={styles.transparentHeader} />,
+          drawerType: "back",
+          overlayColor: "transparent",
+          drawerStyle: styles.drawerStyles,
+          drawerContentContainerStyle: styles.container,
+          sceneContainerStyle: styles.scene,
+        }}
+        drawerContent={(props) => {
+          return <CustonDrawer {...props} />;
+        }}
+      >
+        <Drawer.Screen name="Screens">
+          {(props) => <Screens {...props} />}
+        </Drawer.Screen>
+      </Drawer.Navigator>
+    </LinearGradient>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
+
+    alignItems: Platform.OS === "ios" ? "center" : null,
   },
   tabBar: {
     height: 70,
     position: "absolute",
-    bottom: 10,
+    bottom: Platform.OS === "android" ? 10 : 50,
     right: 16,
     left: 16,
     borderRadius: 25,
+    justifyContent: "center",
+    alignItems: "center",
   },
   btn: {
     width: 50,
@@ -623,6 +703,33 @@ const styles = StyleSheet.create({
     textAlign: "center",
     color: "orange",
   },
+  scene: {
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 12,
+    },
+    shadowOpacity: 0.58,
+    shadowRadius: 16.0,
+    backgroundColor: "transparent",
+  },
+  stack: {
+    flex: 1,
+    shadowColor: "#FFF",
+    shadowOffset: {
+      width: 0,
+      height: 8,
+    },
+    shadowOpacity: 0.44,
+    shadowRadius: 10.32,
+    elevation: 5,
+    overflow: "hidden",
+  },
+  transparentHeader: {
+    ...StyleSheet.absoluteFill,
+    backgroundColor: "rgba(0,0,0,0.3)",
+  },
+  drawerStyles: { flex: 1, width: "50%", backgroundColor: "transparent" },
 });
 
 export default Index;

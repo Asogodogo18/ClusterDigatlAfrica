@@ -162,7 +162,6 @@ const styles = StyleSheet.create({
     backgroundColor: "#77ed80",
   },
   section1: {
-    position: "relative",
     zIndex: 5,
 
     top: Platform.OS == "ios" ? -180 : -150,
