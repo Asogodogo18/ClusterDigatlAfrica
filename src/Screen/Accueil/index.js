@@ -23,6 +23,7 @@ import Evenement from "../../Views/eventViews";
 import Webinaire from "../../Views/webinaireViews";
 import { SharedElement } from "react-navigation-shared-element";
 import HeaderHome from "../../Components/headerHome/headerHome";
+import Newsfeed from "../../Views/NewsFeed/newsfeed";
 
 const { height: SCREEN_HEIGHT } = Dimensions.get("window");
 const IS_IPHONE_X = SCREEN_HEIGHT === 812 || SCREEN_HEIGHT === 896;
@@ -122,6 +123,7 @@ const Index = (props) => {
       <ScrollView
         showsVerticalScrollIndicator={false}
         stickyHeaderHiddenOnScroll={true}
+        nestedScrollEnabled
         stickyHeaderIndices={[1]}
         contentContainerStyle={{
           marginTop: Platform.OS == "ios" ? 45 : 60,
@@ -142,6 +144,7 @@ const Index = (props) => {
           >
             {Categories.map((item) => (
               <LinearGradient
+                key={`${item.id}`}
                 colors={["#34c747", "#00FFFF"]}
                 start={{ x: 0.0, y: 0.0 }}
                 end={{ x: 2.0, y: 0.0 }}
@@ -207,7 +210,6 @@ const Index = (props) => {
         />
         <View
           style={{
-            elevation: 5,
             paddingTop: 30,
             borderTopLeftRadius: 36,
             borderTopRightRadius: 36,
@@ -227,6 +229,7 @@ const Index = (props) => {
             horizontal={true}
           />
         </View>
+        <Newsfeed />
       </ScrollView>
     </SafeAreaView>
   );

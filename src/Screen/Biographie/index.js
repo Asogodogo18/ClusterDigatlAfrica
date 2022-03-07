@@ -77,34 +77,6 @@ const index = ({ navigation }) => {
             </SharedElement>
 
             <View>
-              {/* <SharedElement
-                id={`ìtem.${biography.tel}.description`}
-                style={{
-                  marginBottom: 100,
-                }}
-              >
-                <List.AccordionGroup>
-                  <List.Accordion title="DESCRIPTION" id="1">
-                    <List.Item
-                      description={biography.description}
-                      descriptionNumberOfLines={10}
-                      descriptionStyle={{
-                        backgroundColor: "red",
-                        fontWeight: "bold",
-                        color: "white",
-                        fontWeight: "500",
-                        textAlign: "center",
-                        // padding: 10,
-                        marginTop: -10,
-                      }}
-                    />
-
-                <Text>
-                  {biography.description.substring(0, 30).padEnd(33, ".")}
-                </Text>
-                </List.Accordion>
-                </List.AccordionGroup>
-              </SharedElement> */}
               <SharedElement id={`ìtem.${biography.tel}.date`}>
                 <Text
                   style={{

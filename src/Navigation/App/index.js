@@ -512,7 +512,7 @@ const Screens = ({ navigation }) => {
   }, [isDrawerOpen]);
 
   const screenStyle = useAnimatedStyle(() => {
-    const scale = interpolate(sv.value, [0, 1], [1, 0.7], {
+    const scale = interpolate(sv.value, [0, 0.5, 1], [1, 0.85, 0.7], {
       extrapolateRight: Extrapolate.CLAMP,
     });
 
@@ -524,23 +524,7 @@ const Screens = ({ navigation }) => {
 
   return (
     <Animated.View style={[styles.stack, screenStyle]}>
-      <Stack.Navigator
-        screenOptions={{
-          headerLeft: () => {
-            <TouchableOpacity
-              style={{
-                elevation: 10,
-                position: "absolute",
-                top: 10,
-                right: 20,
-              }}
-              onPress={navigation.toggleDrawer}
-            >
-              <Ionicons name="menu-outline" size={24} color="black" />
-            </TouchableOpacity>;
-          },
-        }}
-      >
+      <Stack.Navigator>
         <Stack.Screen
           name="Accueil"
           component={SharedScreens}
@@ -639,17 +623,15 @@ const Index = (props) => {
     <LinearGradient style={{ flex: 1 }} colors={["#b0f3f1", "#ffcfbf"]}>
       <Drawer.Navigator
         backBehavior="none"
-        drawerContentOptions={{
-          activeBackgroundColor: "transparent",
-          activeTintColor: "white",
-          inactiveTintColor: "white",
-        }}
+        initialRouteName="Accueil"
         screenOptions={{
           headerShown: false,
           headerBackground: () => <View style={styles.transparentHeader} />,
           drawerType: "back",
           overlayColor: "transparent",
           drawerStyle: styles.drawerStyles,
+          drawerActiveBackgroundColor: "lightgreen",
+          drawerActiveTintColor: "purple",
           drawerContentContainerStyle: styles.container,
           sceneContainerStyle: styles.scene,
         }}
@@ -729,7 +711,7 @@ const styles = StyleSheet.create({
     ...StyleSheet.absoluteFill,
     backgroundColor: "rgba(0,0,0,0.3)",
   },
-  drawerStyles: { flex: 1, width: "50%", backgroundColor: "transparent" },
+  drawerStyles: { flex: 1, width: "80%", backgroundColor: "transparent" },
 });
 
 export default Index;

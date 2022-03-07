@@ -5,13 +5,14 @@ import Swiper from "react-native-swiper";
 // import Data from "../Utils/data";
 
 export default function imageSlider(props) {
-  const {y}= props
+  const { y } = props;
   return (
     <View {...props}>
       <Swiper activeDotColor="white" autoplay={true} autoplayTimeout={3}>
         {props.data.map((item, key) => {
           return (
             <ImageBackground
+              key={`${item.title}`}
               source={item.image}
               style={{ width: "100%", height: 250 }}
               resizeMode="cover"
