@@ -229,6 +229,7 @@ const Index = (props) => {
             horizontal={true}
           />
         </View>
+        {/* ici on appelle le component pour le rendu de la partie fil d'actualite */}
         <Newsfeed />
       </ScrollView>
     </SafeAreaView>

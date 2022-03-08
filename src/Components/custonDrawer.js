@@ -6,13 +6,14 @@ import {
   MaterialCommunityIcons,
   Icon,
   FontAwesome5,
+  AntDesign,
+  Ionicons,
+  MaterialIcons,
 } from "@expo/vector-icons";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { useNavigation } from "@react-navigation/native";
 
 export default function custonDrawer(props) {
-  console.log("--------------------------------------------");
-  console.log("state :", props.state);
   return (
     <View style={{ flex: 1 }}>
       <View
@@ -41,7 +42,10 @@ export default function custonDrawer(props) {
       >
         <DrawerItem
           icon={({ focused, couleur, size }) => (
-            <FontAwesome5 name="home" size={20} color="black" />
+            <Image
+              source={require("../../assets/icons/home.png")}
+              style={{ height: 30, width: 30 }}
+            />
           )}
           label="Accueil"
           focused={
@@ -53,7 +57,10 @@ export default function custonDrawer(props) {
         />
         <DrawerItem
           icon={({ focused, couleur, size }) => (
-            <FontAwesome5 name="map-marked-alt" size={20} color="black" />
+            <Image
+              source={require("../../assets/icons/student.png")}
+              style={{ height: 30, width: 30 }}
+            />
           )}
           label="CDA Virtual Academy"
           focused={
@@ -68,7 +75,10 @@ export default function custonDrawer(props) {
 
         <DrawerItem
           icon={({ focused, couleur, size }) => (
-            <FontAwesome5 name="map-marked-alt" size={20} color="black" />
+            <Image
+              source={require("../../assets/LOGO VACA.png")}
+              style={{ height: 30, width: 30 }}
+            />
           )}
           label="E-Vote"
           labelStyle={styles.drawerLblStyle}
@@ -76,59 +86,80 @@ export default function custonDrawer(props) {
         />
         <DrawerItem
           icon={({ focused, couleur, size }) => (
-            <FontAwesome5 name="map-marked-alt" size={20} color="black" />
+            <Image
+              source={require("../../assets/icons/profil.png")}
+              style={{ height: 30, width: 30 }}
+            />
           )}
           label="Profile"
           labelStyle={styles.drawerLblStyle}
-          onPress={() => props.navigation.navigate("Accueil")}
+          onPress={() => props.navigation.navigate("Profiles")}
         />
         <DrawerItem
           icon={({ focused, couleur, size }) => (
-            <FontAwesome5 name="map-marked-alt" size={20} color="black" />
+            <Image
+              source={require("../../assets/icons/notification.png")}
+              style={{ height: 30, width: 30 }}
+            />
           )}
           label="Notifications"
           labelStyle={styles.drawerLblStyle}
-          onPress={() => props.navigation.navigate("Accueil")}
+          onPress={() => props.navigation.navigate("Notification")}
         />
         <DrawerItem
           icon={({ focused, couleur, size }) => (
-            <FontAwesome5 name="map-marked-alt" size={20} color="black" />
+            <Image
+              source={require("../../assets/icons/message.png")}
+              style={{ height: 30, width: 30 }}
+            />
           )}
           label="Messages"
           labelStyle={styles.drawerLblStyle}
-          onPress={() => props.navigation.navigate("Accueil")}
+          onPress={() => props.navigation.navigate("Message")}
         />
         <DrawerItem
           icon={({ focused, couleur, size }) => (
-            <FontAwesome5 name="map-marked-alt" size={20} color="black" />
+            <Image
+              source={require("../../assets/icons/favoris.png")}
+              style={{ height: 30, width: 30 }}
+            />
           )}
           label="Favoris"
           labelStyle={styles.drawerLblStyle}
-          onPress={() => props.navigation.navigate("Accueil")}
+          onPress={() => props.navigation.navigate("Favoris")}
         />
         <DrawerItem
           icon={({ focused, couleur, size }) => (
-            <FontAwesome5 name="map-marked-alt" size={20} color="black" />
+            <Image
+              source={require("../../assets/icons/groupe.png")}
+              style={{ height: 30, width: 30 }}
+            />
           )}
           label="Groupes"
           labelStyle={styles.drawerLblStyle}
-          onPress={() => props.navigation.navigate("Accueil")}
+          onPress={() => props.navigation.navigate("Groupe")}
         />
         <DrawerItem
           icon={({ focused, couleur, size }) => (
-            <FontAwesome5 name="map-marked-alt" size={20} color="black" />
+            <Image
+              source={require("../../assets/icons/actualite.png")}
+              style={{ height: 25, width: 25 }}
+            />
           )}
           label="Sujets d'actualité"
           labelStyle={styles.drawerLblStyle}
-          onPress={() => props.navigation.navigate("Accueil")}
+          onPress={() => props.navigation.navigate("Actualite")}
         />
         <DrawerItem
           icon={({ focused, couleur, size }) => (
-            <FontAwesome5 name="map-marked-alt" size={20} color="black" />
+            <Image
+              source={require("../../assets/icons/reglage.png")}
+              style={{ height: 30, width: 30 }}
+            />
           )}
           label="Réglages"
           labelStyle={styles.drawerLblStyle}
-          onPress={() => props.navigation.navigate("Accueil")}
+          onPress={() => props.navigation.navigate("Reglage")}
         />
       </DrawerContentScrollView>
     </View>

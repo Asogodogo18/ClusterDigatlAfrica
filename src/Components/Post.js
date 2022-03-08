@@ -51,7 +51,7 @@ const Post = ({ item }) => {
         >
           {item.title.substring(0, 15)}
         </Text>
-        <TouchableOpacity style={{ position: "relative", right: 10, top: 5 }}>
+        <TouchableOpacity style={{ position: "relative", right: 10, top: -3 }}>
           <SimpleLineIcons name="options-vertical" size={20} color="gray" />
         </TouchableOpacity>
       </View>
@@ -96,7 +96,8 @@ const Post = ({ item }) => {
           <EvilIcons name="comment" size={24} color="black" />
           <Text>Commenter</Text>
         </TouchableOpacity>
-        <View style={{ alignSelf: "flex-end" }}>
+
+        <View style={{ alignSelf: "flex-end", marginTop: 50 }}>
           <Image
             resizeMode="cover"
             style={{

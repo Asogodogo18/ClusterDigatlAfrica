@@ -27,9 +27,15 @@ const Comments = ({ postId }) => {
   return (
     <View>
       {data.map((element) => {
-        <View key={`${element.id}`} style={{ marginVertical: 4, height: 150 }}>
-          <Text>{element.body}</Text>
-        </View>;
+        //J'avais oublie de mettre le return ici
+        return (
+          <View
+            key={`${element.id}`}
+            style={{ marginVertical: 4, height: 150, padding: 10 }}
+          >
+            <Text>{element.body}</Text>
+          </View>
+        );
       })}
     </View>
   );

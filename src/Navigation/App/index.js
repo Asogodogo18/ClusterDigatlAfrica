@@ -61,6 +61,15 @@ import Profile from "../../Screen/Uvm/Profile";
 import uvmCategorie from "../../Views/UvmCategorie";
 import Course from "../../Views/UvmCours";
 import CoursView from "../../Views/UvmCours/CoursView";
+//Screen drawer
+import Actualite from "../../Screen/Actualite/Index";
+import Favoris from "../../Screen/Favoris/Index";
+import Profiles from "../../Screen/Profil/Index";
+import Notification from "../../Screen/Notification/Index";
+import Message from "../../Screen/Message/Index";
+import Reglage from "../../Screen/Reglage/Index";
+import Groupe from "../../Screen/Groupe/Index";
+
 import Animated, {
   Easing,
   useSharedValue,
@@ -528,6 +537,41 @@ const Screens = ({ navigation }) => {
         <Stack.Screen
           name="Accueil"
           component={SharedScreens}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Actualite"
+          component={Actualite}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Favoris"
+          component={Favoris}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Notification"
+          component={Notification}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Groupe"
+          component={Groupe}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Message"
+          component={Message}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Profiles"
+          component={Profiles}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Reglage"
+          component={Reglage}
           options={{ headerShown: false }}
         />
         <Stack.Screen
