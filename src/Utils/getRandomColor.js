@@ -13,3 +13,8 @@ function getRandomColor(name) {
 }
 
 export default getRandomColor;
+
+export function getFirstLetter(name) {
+  const firstAlphabet = name.charAt(0).toUpperCase();
+  return firstAlphabet;
+}

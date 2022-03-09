@@ -25,7 +25,7 @@ const Post = ({ item }) => {
           flex: 1,
           flexDirection: "row",
           alignItems: "center",
-          marginBottom: 5,
+          marginBottom: 8,
           overflow: "hidden",
           borderRadius: 10,
         }}
@@ -33,8 +33,8 @@ const Post = ({ item }) => {
         <Image
           resizeMode="cover"
           style={{
-            width: 40,
-            height: 40,
+            width: 38,
+            height: 38,
             borderRadius: 10,
             overflow: "hidden",
           }}
@@ -44,8 +44,8 @@ const Post = ({ item }) => {
           style={{
             marginLeft: 10,
             width: "75%",
-            fontSize: 16,
-            fontWeight: "700",
+            fontSize: 14,
+            fontWeight: "500",
           }}
           multiline
         >
@@ -73,7 +73,7 @@ const Post = ({ item }) => {
       {item.body ? (
         <Text
           multiline
-          style={{ marginTop: 4, padding: 4, fontSize: 15, fontWeight: "500" }}
+          style={{ marginTop: 4, padding: 4, fontSize: 12, fontWeight: "400" }}
         >
           {item.body}
         </Text>
@@ -85,7 +85,7 @@ const Post = ({ item }) => {
         >
           <EvilIcons name="like" size={24} color="black" />
 
-          <Text>J'aime</Text>
+          <Text style={{ fontSize: 15 }}>J'aime</Text>
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => {
@@ -94,7 +94,7 @@ const Post = ({ item }) => {
           style={{ marginLeft: 5, flexDirection: "row" }}
         >
           <EvilIcons name="comment" size={24} color="black" />
-          <Text>Commenter</Text>
+          <Text style={{ fontSize: 15 }}>Commenter</Text>
         </TouchableOpacity>
 
         <View style={{ alignSelf: "flex-end", marginTop: 50 }}>
@@ -105,8 +105,8 @@ const Post = ({ item }) => {
               right: -120,
               bottom: 10,
               zIndex: 1,
-              width: 35,
-              height: 35,
+              width: 30,
+              height: 30,
               borderRadius: 50,
               overflow: "hidden",
             }}
@@ -119,8 +119,8 @@ const Post = ({ item }) => {
               right: -135,
               bottom: 10,
               zIndex: 3,
-              width: 35,
-              height: 35,
+              width: 30,
+              height: 30,
               borderRadius: 50,
               overflow: "hidden",
             }}
@@ -133,8 +133,8 @@ const Post = ({ item }) => {
               right: -150,
               bottom: 10,
               zIndex: 4,
-              width: 35,
-              height: 35,
+              width: 30,
+              height: 30,
               borderRadius: 50,
               overflow: "hidden",
             }}
