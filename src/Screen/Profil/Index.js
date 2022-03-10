@@ -7,9 +7,16 @@ import {
   TouchableOpacity,
   Animated,
 } from "react-native";
-import React from "react";
-import { FontAwesome5, FontAwesome, Ionicons } from "@expo/vector-icons";
+import React, { useState } from "react";
+import {
+  FontAwesome5,
+  FontAwesome,
+  Ionicons,
+  Fontisto,
+} from "@expo/vector-icons";
 import { Divider, List } from "react-native-paper";
+import SegmentedControlTab from "react-native-segmented-control-tab";
+import Swiper from "react-native-swiper";
 
 const BackDrop = () => {
   return (
@@ -17,7 +24,7 @@ const BackDrop = () => {
       style={[
         StyleSheet.absoluteFillObject,
         {
-          backgroundColor: "#0D0106",
+          backgroundColor: "white",
         },
       ]}
     />
@@ -29,7 +36,7 @@ const Square = () => {
       style={{
         width: 500,
         height: 500,
-        backgroundColor: "#F75C03",
+        backgroundColor: "#00b712",
         borderRadius: 356,
         position: "absolute",
         top: -280,
@@ -38,11 +45,17 @@ const Square = () => {
     />
   );
 };
+
 const Index = ({ navigation }) => {
+  const [singleIndex, setsingleIndex] = useState(0);
+  const onIndexChanged = (index) => {
+    setsingleIndex(index);
+  };
   return (
     <ScrollView contentContainerStyle={{ flexGrow: 1, paddingBottom: 100 }}>
       <BackDrop />
       <Square />
+
       <Image
         source={require("../../../assets/profil.jpg")}
         style={styles.img}
@@ -58,13 +71,59 @@ const Index = ({ navigation }) => {
           marginBottom: 15,
         }}
       >
-        <View style={{ flex: 2 }}>
-          <Text style={{ fontSize: 18, fontWeight: "bold", color: "white" }}>
+        <View style={{ flex: 2.5 }}>
+          <Text style={{ fontSize: 18, fontWeight: "bold", color: "black" }}>
             Cheick abba sogodogo
           </Text>
-          <Text style={{ fontSize: 13, fontWeight: "300", color: "white" }}>
-            abbasogodogo@gmail.com
+          <Text style={{ fontSize: 13, fontWeight: "300", color: "black" }}>
+            @Asogodogo18
           </Text>
+          <View style={{ flex: 0, marginTop: 10 }}>
+            <View style={{ flexDirection: "row" }}>
+              <Fontisto name="world-o" size={15} color="black" />
+              <Text> Vivre au - Mali</Text>
+            </View>
+            <View style={{ flexDirection: "row", marginTop: 2 }}>
+              <Fontisto name="date" size={15} color="black" />
+              <Text> Membre depuis - January, 2021</Text>
+            </View>
+          </View>
+
+          <View
+            style={{
+              flexDirection: "row",
+              marginTop: 5,
+              justifyContent: "space-between",
+            }}
+          >
+            <View
+              style={{
+                marginRight: 10,
+              }}
+            >
+              <Text>
+                12 {""} <Text>Postes</Text>
+              </Text>
+            </View>
+            <View
+              style={{
+                marginRight: 10,
+              }}
+            >
+              <Text>
+                120 {""} <Text>Abonements</Text>
+              </Text>
+            </View>
+            <View
+              style={{
+                marginRight: 10,
+              }}
+            >
+              <Text>
+                180 {""} <Text>Abonnées</Text>
+              </Text>
+            </View>
+          </View>
         </View>
         <View
           style={{
@@ -77,7 +136,7 @@ const Index = ({ navigation }) => {
               height: 55,
               width: 55,
               padding: 15,
-              backgroundColor: "orange",
+              backgroundColor: "#00b712",
               elevation: 5,
               borderRadius: 35,
             }}
@@ -92,45 +151,55 @@ const Index = ({ navigation }) => {
           width: "50%",
           alignSelf: "center",
           height: 1.5,
-          backgroundColor: "orange",
+          backgroundColor: "#00b712",
           elevation: 2.5,
         }}
       />
-      <View style={{ flex: 1 }}>
-        <List.Section>
-          <List.Item
-            title="Conditions d'utilisation générale"
-            titleStyle={{ color: "white" }}
-            left={() => (
-              <List.Icon color="#fff" icon="clipboard-check-outline" />
-            )}
-          />
-          <List.Item
-            title="Politique de protection des données personelles"
-            titleStyle={{ color: "white" }}
-            left={() => <List.Icon color="#fff" icon="account-key-outline" />}
-          />
-        </List.Section>
-      </View>
-      <Divider
-        style={{
-          marginBottom: 5,
-          width: "51%",
-          alignSelf: "center",
-          height: 1.5,
-          backgroundColor: "orange",
-          elevation: 2.5,
-        }}
-      />
-      <View
-        style={{
-          alignSelf: "center",
-        }}
-      >
-        <TouchableOpacity style={styles.touch} onPress={() => {}}>
-          <FontAwesome name="sign-out" size={24} color="white" />
-          <Text style={styles.text}>Déconnexion</Text>
-        </TouchableOpacity>
+      <View style={{ width: "100%", alignSelf: "center" }}>
+        <SegmentedControlTab
+          values={["Postes", "Médias", "Aimé"]}
+          selectedIndex={singleIndex}
+          tabStyle={{ borderColor: "transparent" }}
+          tabsContainerStyle={{
+            height: 45,
+          }}
+          activeTabStyle={{
+            elevation: 5,
+            borderBottomWidth: 5,
+            borderBottomColor: "green",
+            backgroundColor: "#f5f5f5",
+            borderRadius: 10,
+          }}
+          activeTabTextStyle={{
+            color: "black",
+            fontSize: 16,
+            fontWeight: "bold",
+          }}
+          tabTextStyle={{
+            fontWeight: "500",
+            fontSize: 16,
+            color: "black",
+          }}
+          onTabPress={onIndexChanged}
+        />
+
+        <Swiper
+          index={singleIndex}
+          onIndexChanged={onIndexChanged}
+          loop={false}
+          showsPagination={false}
+          style={{ height: 300, marginTop: 10 }}
+        >
+          <View style={{ flex: 1 }}>
+            <Text>Postes</Text>
+          </View>
+          <View style={{ flex: 1 }}>
+            <Text>Médias</Text>
+          </View>
+          <View style={{ flex: 1 }}>
+            <Text>Aimé</Text>
+          </View>
+        </Swiper>
       </View>
     </ScrollView>
   );
@@ -138,18 +207,18 @@ const Index = ({ navigation }) => {
 
 const styles = StyleSheet.create({
   img: {
-    height: 100,
-    width: 100,
-    borderRadius: 70,
+    height: 150,
+    width: 150,
+    borderRadius: 75,
     borderWidth: 0.8,
     borderColor: "white",
     position: "relative",
-    top: 150,
-    left: 50,
+    top: 130,
+    left: 10,
   },
   touch: {
     width: 150,
-    backgroundColor: "orange",
+    backgroundColor: "#00b712",
     height: 40,
     borderRadius: 10,
     marginBottom: 10,

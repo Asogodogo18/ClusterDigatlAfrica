@@ -11,7 +11,10 @@ const index = (props) => {
         <AntDesign name="arrowleft" size={30} color="white" />
       </TouchableOpacity>
 
-      <Image style={styles.Avatar} source={props.icon} />
+      <Image
+        style={[styles.Avatar, { height: props.height, width: props.width }]}
+        source={props.icon}
+      />
       <Text
         style={{
           flex: 4,

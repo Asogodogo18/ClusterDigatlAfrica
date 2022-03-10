@@ -4,7 +4,7 @@ import React from "react";
 const Index = () => {
   return (
     <View style={styles.contain}>
-      <Text>Messages Screen</Text>
+      <Text>Messages Screen </Text>
     </View>
   );
 };

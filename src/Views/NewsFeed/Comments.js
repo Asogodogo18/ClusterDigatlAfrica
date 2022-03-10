@@ -223,7 +223,7 @@ const Comments = ({ postId }) => {
 const styles = StyleSheet.create({
   input: {
     height: 35,
-    width: 290,
+    width: 280,
     borderRadius: 20,
     borderWidth: 0.8,
     borderColor: "#00b712",
