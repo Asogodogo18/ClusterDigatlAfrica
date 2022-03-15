@@ -19,7 +19,9 @@ import { Apercu, Credits, TableMatiere } from "../../Components/UvmSegmented";
 
 const { height, width } = Dimensions.get("screen");
 const footerHeight = 100;
-const Cours = ({ navigation }) => {
+
+const Cours = ({ navigation, route }) => {
+  const { isCert } = route.params;
   const [singleIndex, setsingleIndex] = useState(0);
   const onIndexChanged = (index) => {
     setsingleIndex(index);
@@ -163,7 +165,7 @@ const Cours = ({ navigation }) => {
           }}
         >
           <View style={{ flex: 1 }}>
-            <Apercu />
+            <Apercu isCert={isCert} />
           </View>
           <View style={{ flex: 1 }}>
             <TableMatiere />

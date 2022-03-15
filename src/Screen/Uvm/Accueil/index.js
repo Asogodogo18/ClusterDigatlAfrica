@@ -66,11 +66,16 @@ const Data = [
 
 const AccueilUvm = ({ navigation }) => {
   const [IsActive, setIsActive] = useState(0);
+  const [isCertificate, setIsCertificate] = useState(false);
   const [loading, setLoading] = useState(false);
   const [filter, setFilter] = useState("");
   const [filteredData, setfilteredData] = useState(null);
 
   useEffect(() => {
+    console.log("filtre :", filter);
+    if (filter == "certification") {
+      setIsCertificate(true);
+    } else setIsCertificate(false);
     setLoading(true);
     setfilteredData(FiltreCategory(CategorieData, filter));
     setLoading(false);
@@ -131,7 +136,7 @@ const AccueilUvm = ({ navigation }) => {
 
                 item.name.toLowerCase() === filter.toLowerCase()
                   ? null
-                  : setFilter(item.name.toLocaleLowerCase());
+                  : setFilter(item.name.toLowerCase());
               }}
             >
               <Text
@@ -160,7 +165,11 @@ const AccueilUvm = ({ navigation }) => {
               <ActivityIndicator size="large" color="lightgreen" />
             </Animated.View>
           ) : (
-            <FilteredView data={filteredData} navigation={navigation} />
+            <FilteredView
+              data={filteredData}
+              isCert={isCertificate}
+              navigation={navigation}
+            />
           )
         ) : null}
       </View>

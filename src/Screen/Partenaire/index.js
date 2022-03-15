@@ -8,6 +8,7 @@ import {
   FlatList,
   ScrollView,
   Dimensions,
+  Platform,
 } from "react-native";
 import getRandomColor from "../../Utils/getRandomColor";
 import { SharedElement } from "react-navigation-shared-element";
@@ -36,7 +37,7 @@ const Index = ({ navigation }) => {
             <Image
               style={styles.icon}
               source={{ uri: `${partenaire.icon}` }}
-              resizeMode="cover"
+              resizeMode="contain"
             />
           </SharedElement>
           <View
@@ -68,23 +69,29 @@ const Index = ({ navigation }) => {
             </SharedElement>
           </View>
           <SharedElement id={`ìtem.${partenaire.img}.selection1`}>
-            <Text
-              style={{
-                fontSize: 10,
-                color: "black",
-                fontWeight: "400",
-                letterSpacing: 0,
-                textTransform: "uppercase",
-                textAlign: "center",
-                padding: 5,
-                marginBottom: 0,
-              }}
+            <ScrollView
+              nestedScrollEnabled
+              contentContainerStyle={{ flexGrow: 1 }}
             >
-              {partenaire.selection1}
-              {/* {partenaire.selection1.length > 20
+              <Text
+                style={{
+                  fontSize: 10,
+                  color: "black",
+                  fontWeight: "400",
+                  letterSpacing: 1,
+                  textTransform: "uppercase",
+                  textAlign: "center",
+                  padding: 2,
+                  marginBottom: 0,
+                  //
+                }}
+              >
+                {partenaire.selection1}
+                {/* {partenaire.selection1.length > 20
                   ? partenaire.selection1.substring(0, 20).padEnd(23, ".")
                   : partenaire.selection1} */}
-            </Text>
+              </Text>
+            </ScrollView>
           </SharedElement>
           <View
             style={{
@@ -172,24 +179,25 @@ const Index = ({ navigation }) => {
 const styles = StyleSheet.create({
   contain: {
     flex: 1,
-    backgroundColor: "red",
   },
   card: {
     flex: 1,
     width: 350,
-    height: 350,
+    // height: 360,
     borderRadius: 25,
     // flexDirection: "row",
     marginVertical: 10,
     backgroundColor: "white",
     alignSelf: "center",
+    maxHeight: 450,
+    minHeight: 350,
   },
   icon: {
-    width: "70%",
+    width: "100%",
     height: "70%",
-    resizeMode: "contain",
+
     alignSelf: "center",
-    marginTop: -40,
+    marginTop: Platform.OS === "ios" ? -35 : -40,
   },
   Btn: {
     height: 30,

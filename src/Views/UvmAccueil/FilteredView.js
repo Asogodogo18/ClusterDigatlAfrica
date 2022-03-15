@@ -16,7 +16,7 @@ import Animated, {
 
 import { SharedElement } from "react-navigation-shared-element";
 
-const FilteredView = ({ navigation, data }) => {
+const FilteredView = ({ navigation, data, isCert }) => {
   return (
     <ScrollView
       contentContainerStyle={{
@@ -57,7 +57,7 @@ const FilteredView = ({ navigation, data }) => {
           return (
             <TouchableOpacity
               onPress={() => {
-                navigation.navigate("Course");
+                navigation.navigate("Course", { isCert });
               }}
               activeOpacity={0.8}
               style={[styles.contain]}

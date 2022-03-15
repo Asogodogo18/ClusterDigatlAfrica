@@ -1,8 +1,79 @@
-import { View, Text, StyleSheet, Image, ScrollView } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  Image,
+  ScrollView,
+  FlatList,
+  TouchableOpacity,
+} from "react-native";
+import { FontAwesome5 } from "@expo/vector-icons";
 import React from "react";
 import { Divider } from "react-native-paper";
+const Data = [
+  {
+    id: "1",
+    title: "INFORMATIONS PERSONNELLES",
+    contenu: [
+      {
+        id: "1",
+        nom: "Nom & Prénom",
+        email: "email",
+        tel: "Numero de telephone",
+        pays: "pays",
+        adress: "adresse",
+      },
+    ],
+  },
+  {
+    id: "2",
+    title: "Documents",
+    contenu: [
+      {
+        id: "1",
+        nom: "Certificat de Naissance",
+        email: "Pièce d’identité",
+        tel: "Dernier diplôme",
+      },
+    ],
+  },
+  {
+    id: "3",
+    title: "FORMATION",
+    contenu: [
+      {
+        id: "1",
+        nom: "Motivation",
+        email: "Sélection de la classe",
+      },
+    ],
+  },
+];
 
-export default function Apercu() {
+export default function Apercu({ isCert }) {
+  const renderItem = ({ item }) => {
+    const { contenu } = item;
+    return (
+      <View>
+        <View style={styles.header}>
+          <Text style={{ fontWeight: "bold", fontSize: 15 }}>{item.title}</Text>
+        </View>
+        <View style={styles.container}>
+          {contenu.map((en) => {
+            return (
+              <View>
+                <Text>{en.nom}</Text>
+                <Text>{en.email}</Text>
+                <Text>{en.tel}</Text>
+                <Text>{en.pays}</Text>
+                <Text>{en.adress}</Text>
+              </View>
+            );
+          })}
+        </View>
+      </View>
+    );
+  };
   return (
     <ScrollView nestedScrollEnabled contentContainerStyle={styles.contain}>
       <View style={styles.section1}>
@@ -54,7 +125,7 @@ export default function Apercu() {
           style={{ height: 250, width: 250, alignSelf: "center" }}
         />
         <Text style={{ padding: 10, fontSize: 20, fontWeight: "bold" }}>
-          Quels sont les pré-requis
+          INFORMATIONS À FOURNIR
         </Text>
         <Divider
           style={{
@@ -66,22 +137,16 @@ export default function Apercu() {
           }}
         />
       </View>
-
-      <View style={styles.section2}>
-        <Text style={{ padding: 2 }}>Prerequis</Text>
-        <Text style={{ padding: 10 }}>
-          Cillum quis qui labore eu fugiat officia officia sint proident nulla.
-          Ad adipisicing qui sit consequat nulla labore do fugiat nisi minim
-          nulla incididunt. Excepteur dolore elit et amet tempor officia ad
-          nulla occaecat ea elit. Quis enim magna cupidatat nisi sint in amet
-          reprehenderit aliquip. Aliqua anim Lorem enim ullamco id mollit duis
-          laborum eiusmod enim.
-        </Text>
-        <Image
-          source={require("../../../assets/student.png")}
-          style={{ height: 250, width: 250, alignSelf: "center" }}
-        />
-      </View>
+      {isCert ? null : (
+        <View style={styles.section2}>
+          <FlatList
+            nestedScrollEnabled
+            data={Data}
+            renderItem={renderItem}
+            keyExtractor={(item) => item.id}
+          />
+        </View>
+      )}
       <View style={styles.section3}></View>
     </ScrollView>
   );
@@ -96,4 +161,8 @@ const styles = StyleSheet.create({
   section1: { flex: 1 },
   section2: { flex: 1 },
   section3: { flex: 1 },
+  container: {
+    flex: 1,
+    padding: 5,
+  },
 });

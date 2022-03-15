@@ -1,17 +1,6 @@
 import React from "react";
-import { View, Text, Image, StyleSheet } from "react-native";
+import { View, Text, Image, StyleSheet, Platform } from "react-native";
 import { DrawerContentScrollView, DrawerItem } from "@react-navigation/drawer";
-import {
-  FontAwesome,
-  MaterialCommunityIcons,
-  Icon,
-  FontAwesome5,
-  AntDesign,
-  Ionicons,
-  MaterialIcons,
-} from "@expo/vector-icons";
-import { TouchableOpacity } from "react-native-gesture-handler";
-import { useNavigation } from "@react-navigation/native";
 
 export default function custonDrawer(props) {
   return (
@@ -22,7 +11,7 @@ export default function custonDrawer(props) {
           justifyContent: "center",
           position: "absolute",
           left: 55,
-          top: -40,
+          top: Platform.OS === "ios" ? -30 : -40,
         }}
       >
         <Image
