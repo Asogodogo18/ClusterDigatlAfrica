@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useLayoutEffect } from "react";
 import {
   View,
   Text,
@@ -21,7 +21,19 @@ const { height, width } = Dimensions.get("screen");
 const footerHeight = 100;
 
 const Cours = ({ navigation, route }) => {
-  const { isCert } = route.params;
+  const [isCert, setIsCert] = useState(false);
+  console.log("route", route);
+
+  useLayoutEffect(() => {
+    if (route.params !== "undefined") {
+      const { isCert } = route.params;
+      setIsCert(isCert);
+    }
+    return () => {
+      setIsCert(false);
+    };
+  }, []);
+
   const [singleIndex, setsingleIndex] = useState(0);
   const onIndexChanged = (index) => {
     setsingleIndex(index);
@@ -176,7 +188,7 @@ const Cours = ({ navigation, route }) => {
         </Swiper>
       </View>
       <View style={styles.section3}>
-        <Text style={{ textAlign: "center" }}>Course acces libre</Text>
+        <Text style={{ textAlign: "center" }}>Course access libre</Text>
         <View
           style={{
             alignSelf: "center",

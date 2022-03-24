@@ -58,7 +58,6 @@ import AccueilUvm from "../../Screen/Uvm/Accueil";
 import Library from "../../Screen/Uvm/Bibliothéque";
 import Cours from "../../Screen/Uvm/Cours";
 import Profile from "../../Screen/Uvm/Profile";
-import uvmCategorie from "../../Views/UvmCategorie";
 import Course from "../../Views/UvmCours";
 import CoursView from "../../Views/UvmCours/CoursView";
 //Screen drawer
@@ -503,7 +502,7 @@ const UvmStack = () => {
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="Onboarding" component={Onboarding} />
       <Stack.Screen name="Uvm" component={UvmBottomStack} />
-      <Stack.Screen name="Categorie" component={uvmCategorie} />
+
       <Stack.Screen name="Course" component={Course} />
       <Stack.Screen name="CoursView" component={CoursView} />
     </Stack.Navigator>

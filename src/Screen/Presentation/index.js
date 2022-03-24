@@ -15,6 +15,7 @@ import * as Animatable from "react-native-animatable";
 import PRESENTATIONDATA from "../../Data/Presentation.json";
 import { FontAwesome5 } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
+import DetailPresentation from "./detailPresentation";
 import Modal from "react-native-modal";
 const { height } = Dimensions.get("window");
 

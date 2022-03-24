@@ -170,12 +170,12 @@ const styles = StyleSheet.create({
     flex: 1,
     // backgroundColor: "#77ed80",
   },
-  // section1: {
-  //   position: "relative",
-  //   zIndex: 5,
+  section1: {
+    position: "relative",
+    zIndex: 5,
 
-  //   top: Platform.OS == "ios" ? -180 : -150,
-  // },
+    top: Platform.OS == "ios" ? -180 : -150,
+  },
   section: {
     width: "100%",
     // minHeight: 150,

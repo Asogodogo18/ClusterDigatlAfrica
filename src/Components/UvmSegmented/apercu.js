@@ -137,16 +137,15 @@ export default function Apercu({ isCert }) {
           }}
         />
       </View>
-      {isCert ? null : (
-        <View style={styles.section2}>
-          <FlatList
-            nestedScrollEnabled
-            data={Data}
-            renderItem={renderItem}
-            keyExtractor={(item) => item.id}
-          />
-        </View>
-      )}
+      <View style={[styles.section2, { display: isCert ? "none" : "flex" }]}>
+        <FlatList
+          nestedScrollEnabled
+          data={Data}
+          renderItem={renderItem}
+          keyExtractor={(item) => item.id}
+        />
+      </View>
+
       <View style={styles.section3}></View>
     </ScrollView>
   );
