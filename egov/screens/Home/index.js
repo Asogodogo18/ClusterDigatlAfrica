@@ -217,27 +217,27 @@ export default function App() {
                   </View>
                 </View>
                 <View
-                      style={{ flexDirection: "row", justifyContent: "center" }}
-                    >
-                      <Text style={styles.subHeading}>Carte d'électeur</Text>
-                    </View>
-                    <Text style={styles.label2}></Text>
-                    <View style={{ flexDirection: "row" }}>
-                      <View style={styles.itemsLeft}>
-                        <Text style={styles.label}>Date de Vote:</Text>
-                        <Text style={styles.label}>Centre de Vote:</Text>
-                        <Text style={styles.label}>Bureau de Vote:</Text>
-                        <Text style={styles.label}>Lieu de Vote:</Text>
-                        <Text style={styles.label}>Pays de Vote:</Text>
-                      </View>
-                      <View style={styles.itemsRight}>
-                        <Text style={styles.label2}>02-2023</Text>
-                        <Text style={styles.label2}>Centre B</Text>
-                        <Text style={styles.label2}>15</Text>
-                        <Text style={styles.label2}>Boulkasssoumbougou</Text>
-                        <Text style={styles.label2}>MALI</Text>
-                      </View>
-                    </View>
+                  style={{ flexDirection: "row", justifyContent: "center" }}
+                >
+                  <Text style={styles.subHeading}>Carte d'électeur</Text>
+                </View>
+                <Text style={styles.label2}></Text>
+                <View style={{ flexDirection: "row" }}>
+                  <View style={styles.itemsLeft}>
+                    <Text style={styles.label}>Date de Vote:</Text>
+                    <Text style={styles.label}>Centre de Vote:</Text>
+                    <Text style={styles.label}>Bureau de Vote:</Text>
+                    <Text style={styles.label}>Lieu de Vote:</Text>
+                    <Text style={styles.label}>Pays de Vote:</Text>
+                  </View>
+                  <View style={styles.itemsRight}>
+                    <Text style={styles.label2}>02-2023</Text>
+                    <Text style={styles.label2}>Centre B</Text>
+                    <Text style={styles.label2}>15</Text>
+                    <Text style={styles.label2}>Boulkasssoumbougou</Text>
+                    <Text style={styles.label2}>MALI</Text>
+                  </View>
+                </View>
                 {/* {voteInfo.message !=="false" ? (
                   <>
                     {" "}
