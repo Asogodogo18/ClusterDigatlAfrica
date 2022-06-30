@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 
-const index = () => {
+const Index = () => {
   return (
     <View style={styles.contain}>
       <Text>Pass oublier screen</Text>
@@ -16,4 +16,4 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
 });
-export default index;
+export default Index;

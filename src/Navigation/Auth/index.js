@@ -1,5 +1,9 @@
 import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { createSharedElementStackNavigator } from "react-navigation-shared-element";
+import Animated, { Easing } from "react-native-reanimated";
+import { enableScreens } from "react-native-screens";
+enableScreens();
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
 //Importation des Screens
@@ -30,8 +34,56 @@ const Index = () => {
         screenOptions={{ headerShown: false, headerTitleAlign: "center" }}
       >
         {isAppFirstLaunched && <Stack.Screen name="Ecran" component={Ecran} />}
-        <Stack.Screen name="Connexion" component={Connexion} />
-        <Stack.Screen name="Inscription" component={Inscription} />
+        <Stack.Screen
+          name="Connexion"
+          component={Connexion}
+          options={() => ({
+            headerShown: false,
+            gestureEnabled: false,
+            transitionSpec: {
+              open: {
+                animation: "timing",
+                config: { duration: 500, easing: Easing.inOut(Easing.ease) },
+              },
+              close: {
+                animation: "timing",
+                config: { duration: 500, easing: Easing.inOut(Easing.ease) },
+              },
+            },
+            cardStyleInterpolation: ({ current: { progress } }) => {
+              return {
+                cardStyle: {
+                  opacity: progress,
+                },
+              };
+            },
+          })}
+        />
+        <Stack.Screen
+          name="Inscription"
+          component={Inscription}
+          options={() => ({
+            headerShown: false,
+            gestureEnabled: false,
+            transitionSpec: {
+              open: {
+                animation: "timing",
+                config: { duration: 500, easing: Easing.inOut(Easing.ease) },
+              },
+              close: {
+                animation: "timing",
+                config: { duration: 500, easing: Easing.inOut(Easing.ease) },
+              },
+            },
+            cardStyleInterpolation: ({ current: { progress } }) => {
+              return {
+                cardStyle: {
+                  opacity: progress,
+                },
+              };
+            },
+          })}
+        />
         <Stack.Screen name="PassOublier" component={PassOublier} />
       </Stack.Navigator>
     )
